@@ -703,6 +703,19 @@
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/js/app11.js"></script>
+    <script>
+        // Fungsi untuk memperbarui tampilan views di halaman web
+        function updateViews() {
+            const viewsElement = document.querySelector('.views');
+            let viewsCount = localStorage.getItem('viewsCount') || 0;
+            viewsCount = parseInt(viewsCount) + 1;
+            localStorage.setItem('viewsCount', viewsCount);
+            viewsElement.textContent = viewsCount + ' views';
+        }
+
+        // Panggil fungsi updateViews saat halaman dimuat
+        window.onload = updateViews;
+    </script>
 </body>
 
 </html>
