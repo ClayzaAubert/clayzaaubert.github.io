@@ -1,250 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clayza Aubert - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-	
-	<meta name="description" content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
-	<meta name="keywords" content="Portfolio, Clayza Aubert, Aubert">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="Clayza_Aubert">
-	<meta name="theme-color" content="#FFFFFF">
-	<meta http-equiv="content-language" content="id-ID">
-  
-	<!-- Metatag Open Graph (OG) untuk media sosial -->
-	<meta property="og:title" content="Portfolio - Clayza Aubert">
-	<meta property="og:site_name" content="Portfolio - Clayza Aubert">
-	<meta property="og:description" content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
-	<meta property="og:image" content="https://files.catbox.moe/x61007.png"> <!-- URL gambar thumbnail situs Anda -->
-	<meta property="og:url" content="https://clayza.is-a.dev">
-	<meta property="og:type" content="website">
-  
-	<!-- Metatag Twitter Card untuk Twitter -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@ClayzaAubert">
-	<meta name="twitter:title" content="Portfolio - Clayza Aubert">
-	<meta name="twitter:description" content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
-	<meta name="twitter:image" content="https://files.catbox.moe/x61007.png"> <!-- URL gambar thumbnail situs Anda -->
-  
-	<!-- Favicon (ikon situs) -->
-	<link rel="icon" href="https://avatars.githubusercontent.com/u/92805294?v=4" type="image/x-icon">
+    <meta name="description"
+        content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
+    <meta name="keywords" content="Portfolio, Clayza Aubert, Aubert">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Clayza_Aubert">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta http-equiv="content-language" content="id-ID">
+    <meta property="og:title" content="Portfolio - Clayza Aubert">
+    <meta property="og:site_name" content="Portfolio - Clayza Aubert">
+    <meta property="og:description"
+        content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
+    <meta property="og:image" content="https://files.catbox.moe/x61007.png">
+    <meta property="og:url" content="https://clayza.is-a.dev">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ClayzaAubert">
+    <meta name="twitter:title" content="Portfolio - Clayza Aubert">
+    <meta name="twitter:description"
+        content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
+    <meta name="twitter:image" content="https://files.catbox.moe/x61007.png">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/92805294?v=4" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-        
+
         * {
             font-family: "JetBrains Mono", monospace;
         }
-        
+
         .gradient-text {
             background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .card-hover:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
         }
-        
+
         .skill-tag {
             transition: all 0.2s ease-in-out;
         }
-        
+
         .skill-tag:hover {
             transform: scale(1.05);
             background-color: #ffffff;
             color: #000000;
         }
-        
+
         .scroll-smooth {
             scroll-behavior: smooth;
         }
-        
+
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: #111111;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: #333333;
             border-radius: 4px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: #555555;
         }
-		svg {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	filter: sepia(20%);
-	z-index: -1;
-}
+
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            filter: sepia(20%);
+            z-index: -1;
+        }
+
+        /* Discord Status Styles */
+        .discord-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #5865F2;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .discord-status:hover {
+            background: #4752C4;
+            transform: translateY(-2px);
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .status-online {
+            background-color: #23A55A;
+        }
+
+        .status-idle {
+            background-color: #F0B232;
+        }
+
+        .status-dnd {
+            background-color: #F23F43;
+        }
+
+        .status-offline {
+            background-color: #80848E;
+        }
+
+        /* Loading animation */
+        .loading-pulse {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Project card styles */
+        .project-card {
+            background: linear-gradient(145deg, #1f2937, #111827);
+            border: 1px solid #374151;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-color: #6B7280;
+        }
+
+        .project-language {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .language-javascript {
+            background-color: #F7DF1E;
+            color: #000;
+        }
+
+        .language-python {
+            background-color: #3776AB;
+            color: #fff;
+        }
+
+        .language-html {
+            background-color: #E34F26;
+            color: #fff;
+        }
+
+        .language-css {
+            background-color: #1572B6;
+            color: #fff;
+        }
+
+        .language-typescript {
+            background-color: #3178C6;
+            color: #fff;
+        }
+
+        .language-default {
+            background-color: #6B7280;
+            color: #fff;
+        }
+
+        /* Grid responsive improvements */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        @media (max-width: 640px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        .status-online {
+            background-color: #43b581;
+        }
+
+        /* Green */
+        .status-idle {
+            background-color: #faa61a;
+        }
+
+        /* Yellow */
+        .status-dnd {
+            background-color: #f04747;
+        }
+
+        /* Red */
+        .status-offline {
+            background-color: #747f8d;
+        }
+
+        /* Gray */
     </style>
 </head>
+
 <body class="bg-black text-white scroll-smooth">
 
-<svg xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Gradien untuk tubuh -->
-    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#2C2C2C;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
-    </linearGradient>
-    
-    <!-- Gradien untuk kepala -->
-    <linearGradient id="headGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#333333;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
-    </linearGradient>
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#2C2C2C;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="headGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#333333;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+            </linearGradient>
+            <g id="Cabeza" transform="matrix(1, 0, 0, 1, 0, 0)">
+                <path style="fill:#FFFFFF;fill-opacity:1"
+                    d="M-28.9,-1.1L-28.55 -1.95Q-28.1 -3.1 -27.25 -2.95L-26.7 -2.95Q-27.7 -1.65 -28.9 -1.1M-18.35,-1.8Q-15.1 -10.3 -9.6 -6.05Q-15.1 -6.2 -18.35 -1.8M-18.35,1.1Q-15.1 5.45 -9.6 5.35Q-15.1 9.55 -18.35 1.1M-26.7,2.2L-27.25 2.25Q-28.1 2.4 -28.55 1.2L-28.9 0.35Q-27.7 0.9 -26.7 2.2" />
+                <path style="fill:#000000;fill-opacity:1"
+                    d="M-21.05,-8.25Q-13.6 -15.95 -1.3 -12.1Q-7.85 -8.5 -5.85 -4.35Q-2.3 -4.85 10.5 0.15Q0 4.35 -5.85 3.65Q-7.85 7.75 -1.25 12.45Q-13.6 15.2 -21.05 7.5Q-29.55 4.05 -30.2 -0.35Q-29.55 -4.8 -21.05 -8.25M-26.7,-2.95L-27.25 -2.95Q-28.1 -3.1 -28.55 -1.95L-28.9 -1.1Q-27.7 -1.65 -26.7 -2.95M-9.6,-6.05Q-15.1 -10.3 -18.35 -1.8Q-15.1 -6.2 -9.6 -6.05M-9.6,5.35Q-15.1 5.45 -18.35 1.1Q-15.1 9.55 -9.6 5.35M-28.9,0.35L-28.55 1.2Q-28.1 2.4 -27.25 2.25L-26.7 2.2Q-27.7 0.9 -28.9 0.35" />
+                <circle cx="-15" cy="-4" r="3.5" fill="#FF4444" stroke="#000" stroke-width="0.6" />
+                <circle cx="-14" cy="-4" r="2.2" fill="#FF0000" />
+                <circle cx="-13" cy="-4.5" r="1.2" fill="#FFAAAA" />
+                <circle cx="-12.5" cy="-5" r="0.6" fill="#FFFFFF" opacity="0.9" />
+                <circle cx="-15" cy="4" r="3.5" fill="#FF4444" stroke="#000" stroke-width="0.6" />
+                <circle cx="-14" cy="4" r="2.2" fill="#FF0000" />
+                <circle cx="-13" cy="4.5" r="1.2" fill="#FFAAAA" />
+                <circle cx="-12.5" cy="5" r="0.6" fill="#FFFFFF" opacity="0.9" />
+                <path fill="#2C2C2C" stroke="#000" stroke-width="0.8"
+                    d="M10.5,-2 Q20,-1 24,0 Q20,1 10.5,2 Q14,0 10.5,-2 Z" />
+                <ellipse cx="20" cy="-1" rx="1" ry="0.7" fill="#000" />
+                <ellipse cx="20" cy="1" rx="1" ry="0.7" fill="#000" />
+                <path fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"
+                    d="M24,-2 Q32,-4 36,-2 Q34,-1 32,0" />
+                <path fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"
+                    d="M24,2 Q32,4 36,2 Q34,1 32,0" />
+                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-25,-8 Q-27,-14 -23,-16 Q-21,-14 -23,-8" />
+                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-18,-10 Q-20,-15 -16,-17 Q-14,-15 -16,-10" />
+                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-25,8 Q-27,14 -23,16 Q-21,14 -23,8" />
+                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-18,10 Q-20,15 -16,17 Q-14,15 -16,10" />
+                <circle cx="-8" cy="-6" r="1.5" fill="#444" opacity="0.7" />
+                <circle cx="-2" cy="-4" r="1.3" fill="#444" opacity="0.7" />
+                <circle cx="4" cy="-2" r="1.1" fill="#444" opacity="0.7" />
+                <circle cx="-8" cy="6" r="1.5" fill="#444" opacity="0.7" />
+                <circle cx="-2" cy="4" r="1.3" fill="#444" opacity="0.7" />
+                <circle cx="4" cy="2" r="1.1" fill="#444" opacity="0.7" />
+            </g>
 
-<!-- Kepala Naga Cina -->
-<g id="Cabeza" transform="matrix(1, 0, 0, 1, 0, 0)">
-  <!-- Bagian putih kepala (dari referensi) -->
-  <path style="fill:#FFFFFF;fill-opacity:1" 
-        d="M-28.9,-1.1L-28.55 -1.95Q-28.1 -3.1 -27.25 -2.95L-26.7 -2.95Q-27.7 -1.65 -28.9 -1.1M-18.35,-1.8Q-15.1 -10.3 -9.6 -6.05Q-15.1 -6.2 -18.35 -1.8M-18.35,1.1Q-15.1 5.45 -9.6 5.35Q-15.1 9.55 -18.35 1.1M-26.7,2.2L-27.25 2.25Q-28.1 2.4 -28.55 1.2L-28.9 0.35Q-27.7 0.9 -26.7 2.2" />
-  
-  <!-- Bentuk utama kepala hitam (dari referensi) -->
-  <path style="fill:#000000;fill-opacity:1" 
-        d="M-21.05,-8.25Q-13.6 -15.95 -1.3 -12.1Q-7.85 -8.5 -5.85 -4.35Q-2.3 -4.85 10.5 0.15Q0 4.35 -5.85 3.65Q-7.85 7.75 -1.25 12.45Q-13.6 15.2 -21.05 7.5Q-29.55 4.05 -30.2 -0.35Q-29.55 -4.8 -21.05 -8.25M-26.7,-2.95L-27.25 -2.95Q-28.1 -3.1 -28.55 -1.95L-28.9 -1.1Q-27.7 -1.65 -26.7 -2.95M-9.6,-6.05Q-15.1 -10.3 -18.35 -1.8Q-15.1 -6.2 -9.6 -6.05M-9.6,5.35Q-15.1 5.45 -18.35 1.1Q-15.1 9.55 -9.6 5.35M-28.9,0.35L-28.55 1.2Q-28.1 2.4 -27.25 2.25L-26.7 2.2Q-27.7 0.9 -28.9 0.35" />
-  
-  <!-- Mata kiri (merah seperti yang diminta) -->
-  <circle cx="-15" cy="-4" r="3.5" fill="#FF4444" stroke="#000" stroke-width="0.6"/>
-  <circle cx="-14" cy="-4" r="2.2" fill="#FF0000"/>
-  <circle cx="-13" cy="-4.5" r="1.2" fill="#FFAAAA"/>
-  <circle cx="-12.5" cy="-5" r="0.6" fill="#FFFFFF" opacity="0.9"/>
-  
-  <!-- Mata kanan (merah seperti yang diminta) -->
-  <circle cx="-15" cy="4" r="3.5" fill="#FF4444" stroke="#000" stroke-width="0.6"/>
-  <circle cx="-14" cy="4" r="2.2" fill="#FF0000"/>
-  <circle cx="-13" cy="4.5" r="1.2" fill="#FFAAAA"/>
-  <circle cx="-12.5" cy="5" r="0.6" fill="#FFFFFF" opacity="0.9"/>
-  
-  <!-- Moncong yang diperpanjang -->
-  <path fill="#2C2C2C" stroke="#000" stroke-width="0.8"
-        d="M10.5,-2 Q20,-1 24,0 Q20,1 10.5,2 Q14,0 10.5,-2 Z"/>
-  
-  <!-- Lubang hidung -->
-  <ellipse cx="20" cy="-1" rx="1" ry="0.7" fill="#000"/>
-  <ellipse cx="20" cy="1" rx="1" ry="0.7" fill="#000"/>
-  
-  <!-- Kumis panjang (ciri khas naga Cina) -->
-  <path fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"
-        d="M24,-2 Q32,-4 36,-2 Q34,-1 32,0"/>
-  <path fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"
-        d="M24,2 Q32,4 36,2 Q34,1 32,0"/>
-  
-  <!-- Tanduk/antler kecil -->
-  <path fill="#333" stroke="#000" stroke-width="0.5"
-        d="M-25,-8 Q-27,-14 -23,-16 Q-21,-14 -23,-8"/>
-  <path fill="#333" stroke="#000" stroke-width="0.5"
-        d="M-18,-10 Q-20,-15 -16,-17 Q-14,-15 -16,-10"/>
-  <path fill="#333" stroke="#000" stroke-width="0.5"
-        d="M-25,8 Q-27,14 -23,16 Q-21,14 -23,8"/>
-  <path fill="#333" stroke="#000" stroke-width="0.5"
-        d="M-18,10 Q-20,15 -16,17 Q-14,15 -16,10"/>
-  
-  <!-- Detail sisik pada kepala -->
-  <circle cx="-8" cy="-6" r="1.5" fill="#444" opacity="0.7"/>
-  <circle cx="-2" cy="-4" r="1.3" fill="#444" opacity="0.7"/>
-  <circle cx="4" cy="-2" r="1.1" fill="#444" opacity="0.7"/>
-  <circle cx="-8" cy="6" r="1.5" fill="#444" opacity="0.7"/>
-  <circle cx="-2" cy="4" r="1.3" fill="#444" opacity="0.7"/>
-  <circle cx="4" cy="2" r="1.1" fill="#444" opacity="0.7"/>
-</g>
+            <g id="Espina">
+                <ellipse cx="-8" cy="0" rx="8" ry="8" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8" />
 
-    <!-- Tubuh Panjang Naga Cina -->
-    <g id="Espina">
-      <!-- Bagian leher -->
-      <ellipse cx="-8" cy="0" rx="8" ry="8" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8"/>
-      
-      <!-- Tubuh tengah -->
-      <ellipse cx="8" cy="0" rx="10" ry="6" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8"/>
-      
-      <!-- Tubuh belakang -->
-      <ellipse cx="25" cy="0" rx="8" ry="5" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8"/>
-      
-      <!-- Ekor panjang berliku (seperti naga Cina) -->
-      <path fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8"
-            d="M33,-3 Q40,-4 45,-2 Q50,0 48,3 Q45,5 40,4 Q35,2 33,3 Q36,0 33,-3 Z"/>
-      
-      <!-- Ujung ekor dengan rumbai -->
-      <path fill="#333" stroke="#000" stroke-width="0.6"
-            d="M48,0 Q55,-2 58,0 Q55,2 50,2 Q52,1 48,0"/>
-      <path fill="#333" stroke="#000" stroke-width="0.4"
-            d="M55,-1 Q60,-3 62,-1 Q60,1 57,1"/>
-      <path fill="#333" stroke="#000" stroke-width="0.4"
-            d="M55,1 Q60,3 62,1 Q60,-1 57,-1"/>
-      
-      <!-- Duri punggung (lebih halus untuk naga Cina) -->
-      <ellipse cx="-15" cy="-8" rx="1.5" ry="3" fill="#333" opacity="0.7"/>
-      <ellipse cx="-5" cy="-8" rx="1.2" ry="2.5" fill="#333" opacity="0.7"/>
-      <ellipse cx="8" cy="-6" rx="1.2" ry="2" fill="#333" opacity="0.7"/>
-      <ellipse cx="20" cy="-5" rx="1" ry="1.8" fill="#333" opacity="0.7"/>
-      <ellipse cx="32" cy="-3" rx="0.8" ry="1.5" fill="#333" opacity="0.7"/>
-      
-      <!-- Sisik sepanjang tubuh -->
-      <circle cx="-10" cy="-4" r="1.5" fill="#444" opacity="0.5"/>
-      <circle cx="-2" cy="-3" r="1.3" fill="#444" opacity="0.5"/>
-      <circle cx="12" cy="-3" r="1.3" fill="#444" opacity="0.5"/>
-      <circle cx="22" cy="-2" r="1.1" fill="#444" opacity="0.5"/>
-      <circle cx="35" cy="-2" r="1" fill="#444" opacity="0.5"/>
-      
-      <circle cx="-10" cy="4" r="1.5" fill="#444" opacity="0.5"/>
-      <circle cx="-2" cy="3" r="1.3" fill="#444" opacity="0.5"/>
-      <circle cx="12" cy="3" r="1.3" fill="#444" opacity="0.5"/>
-      <circle cx="22" cy="2" r="1.1" fill="#444" opacity="0.5"/>
-      <circle cx="35" cy="2" r="1" fill="#444" opacity="0.5"/>
-    </g>
+                <ellipse cx="8" cy="0" rx="10" ry="6" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8" />
 
-    <!-- Kaki kecil naga Cina -->
-    <g id="Aletas">
-      <!-- Kaki depan kiri -->
-      <ellipse cx="-5" cy="-10" rx="3" ry="8" fill="#333" stroke="#000" stroke-width="0.6"/>
-      <circle cx="-5" cy="-18" r="2" fill="#333" stroke="#000" stroke-width="0.5"/>
-      <!-- Cakar -->
-      <path fill="#000" stroke-width="0.3" d="M-7,-20 L-8,-25 M-5,-20 L-5,-25 M-3,-20 L-2,-25"/>
-      
-      <!-- Kaki depan kanan -->
-      <ellipse cx="-5" cy="10" rx="3" ry="8" fill="#333" stroke="#000" stroke-width="0.6"/>
-      <circle cx="-5" cy="18" r="2" fill="#333" stroke="#000" stroke-width="0.5"/>
-      <!-- Cakar -->
-      <path fill="none" stroke="#000" stroke-width="0.3" d="M-7,20 L-8,25 M-5,20 L-5,25 M-3,20 L-2,25"/>
-      
-      <!-- Kaki belakang kiri -->
-      <ellipse cx="15" cy="-8" rx="2.5" ry="6" fill="#333" stroke="#000" stroke-width="0.6"/>
-      <circle cx="15" cy="-14" r="1.8" fill="#333" stroke="#000" stroke-width="0.5"/>
-      <!-- Cakar -->
-      <path fill="none" stroke="#000" stroke-width="0.3" d="M13,-16 L12,-20 M15,-16 L15,-20 M17,-16 L18,-20"/>
-      
-      <!-- Kaki belakang kanan -->
-      <ellipse cx="15" cy="8" rx="2.5" ry="6" fill="#333" stroke="#000" stroke-width="0.6"/>
-      <circle cx="15" cy="14" r="1.8" fill="#333" stroke="#000" stroke-width="0.5"/>
-      <!-- Cakar -->
-      <path fill="none" stroke="#000" stroke-width="0.3" d="M13,16 L12,20 M15,16 L15,20 M17,16 L18,20"/>
-    </g>
-  </defs>
-  
-  <g id="screen">
-    <use href="#Aletas" />
-    <use href="#Espina" />
-    <use href="#Cabeza" />
-  </g>
-</svg>
+                <ellipse cx="25" cy="0" rx="8" ry="5" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8" />
+
+                <path fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8"
+                    d="M33,-3 Q40,-4 45,-2 Q50,0 48,3 Q45,5 40,4 Q35,2 33,3 Q36,0 33,-3 Z" />
+
+                <path fill="#333" stroke="#000" stroke-width="0.6" d="M48,0 Q55,-2 58,0 Q55,2 50,2 Q52,1 48,0" />
+                <path fill="#333" stroke="#000" stroke-width="0.4" d="M55,-1 Q60,-3 62,-1 Q60,1 57,1" />
+                <path fill="#333" stroke="#000" stroke-width="0.4" d="M55,1 Q60,3 62,1 Q60,-1 57,-1" />
+
+                <ellipse cx="-15" cy="-8" rx="1.5" ry="3" fill="#333" opacity="0.7" />
+                <ellipse cx="-5" cy="-8" rx="1.2" ry="2.5" fill="#333" opacity="0.7" />
+                <ellipse cx="8" cy="-6" rx="1.2" ry="2" fill="#333" opacity="0.7" />
+                <ellipse cx="20" cy="-5" rx="1" ry="1.8" fill="#333" opacity="0.7" />
+                <ellipse cx="32" cy="-3" rx="0.8" ry="1.5" fill="#333" opacity="0.7" />
+
+                <circle cx="-10" cy="-4" r="1.5" fill="#444" opacity="0.5" />
+                <circle cx="-2" cy="-3" r="1.3" fill="#444" opacity="0.5" />
+                <circle cx="12" cy="-3" r="1.3" fill="#444" opacity="0.5" />
+                <circle cx="22" cy="-2" r="1.1" fill="#444" opacity="0.5" />
+                <circle cx="35" cy="-2" r="1" fill="#444" opacity="0.5" />
+
+                <circle cx="-10" cy="4" r="1.5" fill="#444" opacity="0.5" />
+                <circle cx="-2" cy="3" r="1.3" fill="#444" opacity="0.5" />
+                <circle cx="12" cy="3" r="1.3" fill="#444" opacity="0.5" />
+                <circle cx="22" cy="2" r="1.1" fill="#444" opacity="0.5" />
+                <circle cx="35" cy="2" r="1" fill="#444" opacity="0.5" />
+            </g>
+
+            <g id="Aletas">
+                <ellipse cx="-5" cy="-10" rx="3" ry="8" fill="#333" stroke="#000" stroke-width="0.6" />
+                <circle cx="-5" cy="-18" r="2" fill="#333" stroke="#000" stroke-width="0.5" />
+                <path fill="#000" stroke-width="0.3" d="M-7,-20 L-8,-25 M-5,-20 L-5,-25 M-3,-20 L-2,-25" />
+
+                <ellipse cx="-5" cy="10" rx="3" ry="8" fill="#333" stroke="#000" stroke-width="0.6" />
+                <circle cx="-5" cy="18" r="2" fill="#333" stroke="#000" stroke-width="0.5" />
+                <path fill="none" stroke="#000" stroke-width="0.3" d="M-7,20 L-8,25 M-5,20 L-5,25 M-3,20 L-2,25" />
+
+                <ellipse cx="15" cy="-8" rx="2.5" ry="6" fill="#333" stroke="#000" stroke-width="0.6" />
+                <circle cx="15" cy="-14" r="1.8" fill="#333" stroke="#000" stroke-width="0.5" />
+                <path fill="none" stroke="#000" stroke-width="0.3"
+                    d="M13,-16 L12,-20 M15,-16 L15,-20 M17,-16 L18,-20" />
+
+                <ellipse cx="15" cy="8" rx="2.5" ry="6" fill="#333" stroke="#000" stroke-width="0.6" />
+                <circle cx="15" cy="14" r="1.8" fill="#333" stroke="#000" stroke-width="0.5" />
+                <path fill="none" stroke="#000" stroke-width="0.3" d="M13,16 L12,20 M15,16 L15,20 M17,16 L18,20" />
+            </g>
+        </defs>
+
+        <g id="screen">
+            <use href="#Aletas" />
+            <use href="#Espina" />
+            <use href="#Cabeza" />
+        </g>
+    </svg>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-gray-800 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,31 +374,47 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="mb-8">
-                <img src="https://avatars.githubusercontent.com/u/92805294?v=4" 
-                     alt="Clayza Aubert" 
-                     class="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-8 border-4 border-gray-700 shadow-2xl">
+        <div class="max-w-3xl mx-auto flex flex-col items-center text-center sm:text-left">
+
+            <!-- Avatar + Status -->
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-8">
+                <div class="relative flex-shrink-0">
+                    <img src="https://avatars.githubusercontent.com/u/92805294?v=4" alt="Clayza Aubert"
+                        class="w-32 h-32 sm:w-40 sm:h-40 aspect-square object-cover rounded-full border-4 border-gray-700 shadow-2xl">
+                    <span id="status-dot"
+                        class="absolute bottom-2 right-2 w-5 h-5 rounded-full border-2 border-gray-900"></span>
+                </div>
+                <div class="flex flex-col items-center sm:items-start">
+                    <h1 class="text-4xl sm:text-5xl font-bold">
+                        <span class="gradient-text">Clayza Aubert</span>
+                    </h1>
+                    <div id="status-badge"
+                        class="mt-2 px-3 py-1 text-sm rounded-full font-medium text-white bg-gray-700 text-center max-w-[220px] sm:max-w-xs break-words">
+                        Loading status...
+                    </div>
+                </div>
             </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                <span class="gradient-text">Clayza Aubert</span>
-            </h1>
+
+            <!-- Description -->
             <p class="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Programming Enthusiast & Creative Developer
             </p>
-            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
                 Building creative and functional applications with JavaScript, Node.js, and modern technologies
             </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="#projects" 
-                   class="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                    View My Work
-                </a>
-                <a href="https://github.com/ClayzaAubert" 
-                   target="_blank"
-                   class="border border-gray-600 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-900 transition-colors flex items-center gap-2">
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center sm:justify-start">
+                <a href="https://github.com/ClayzaAubert" target="_blank"
+                    class="border border-gray-600 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-900 transition-colors flex items-center gap-2">
                     <i class="fab fa-github"></i>
-                    GitHub Profile
+                    GitHub
+                </a>
+
+                <a href="https://discord.com/users/869009902599815219" target="_blank"
+                    class="border border-indigo-500 px-8 py-3 rounded-lg font-semibold text-indigo-400 hover:border-indigo-400 hover:bg-indigo-900 transition-colors flex items-center gap-2">
+                    <i class="fab fa-discord"></i>
+                    Discord
                 </a>
             </div>
         </div>
@@ -314,12 +428,12 @@
                 <div>
                     <h3 class="text-2xl font-semibold mb-6">👋 Hello World!</h3>
                     <p class="text-gray-300 leading-relaxed mb-6">
-                        I'm a programming enthusiast who loves building creative and functional applications. 
-                        I mostly work with JavaScript, especially using Node.js, and I frequently use MongoDB 
+                        I'm a programming enthusiast who loves building creative and functional applications.
+                        I mostly work with JavaScript, especially using Node.js, and I frequently use MongoDB
                         as my primary database due to its flexibility and powerful document-oriented structure.
                     </p>
                     <p class="text-gray-300 leading-relaxed mb-6">
-                        💡 I believe that every project I build is not just about writing code—it's about 
+                        💡 I believe that every project I build is not just about writing code—it's about
                         creating something meaningful, efficient, and impactful.
                     </p>
                 </div>
@@ -341,7 +455,8 @@
                         <div class="flex items-start gap-3">
                             <div class="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
                             <p class="text-gray-300">
-                                <strong>AI technologies</strong> - exploring machine learning and NLP for intelligent systems
+                                <strong>AI technologies</strong> - exploring machine learning and NLP for intelligent
+                                systems
                             </p>
                         </div>
                     </div>
@@ -351,7 +466,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 gradient-text">Skills & Technologies</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -362,11 +477,16 @@
                         <h3 class="text-xl font-semibold">Backend Frameworks</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Express.js</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Fastify</span>
-						<span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">FastAPI</span>
-						<span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Flask</span>
-						<span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Koa.js</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Express.js</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Fastify</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">FastAPI</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Flask</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Koa.js</span>
                     </div>
                 </div>
 
@@ -377,9 +497,12 @@
                         <h3 class="text-xl font-semibold">Programming Languages</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">JavaScript</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">TypeScript</span>
-			<span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Python</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">JavaScript</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">TypeScript</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Python</span>
                     </div>
                 </div>
 
@@ -390,9 +513,12 @@
                         <h3 class="text-xl font-semibold">Frontend Frameworks</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Next.js</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">React</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Remix</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Next.js</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">React</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Remix</span>
                     </div>
                 </div>
 
@@ -403,8 +529,10 @@
                         <h3 class="text-xl font-semibold">Database</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">MongoDB</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">SQL</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">MongoDB</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">SQL</span>
                     </div>
                 </div>
 
@@ -415,9 +543,13 @@
                         <h3 class="text-xl font-semibold">AI & Machine Learning</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Machine Learning</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">LLM</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">VLM</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Machine
+                            Learning</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">LLM</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">VLM</span>
                     </div>
                 </div>
 
@@ -428,8 +560,10 @@
                         <h3 class="text-xl font-semibold">Specialized Development</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Bot</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Web</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Bot</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Web</span>
                     </div>
                 </div>
 
@@ -440,8 +574,10 @@
                         <h3 class="text-xl font-semibold">Design & Tools</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Photoshop</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">And More...</span>
+                        <span
+                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Photoshop</span>
+                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">And
+                            More...</span>
                     </div>
                 </div>
             </div>
@@ -452,17 +588,30 @@
     <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
-            <div class="text-center">
+
+            <!-- Loading State -->
+            <div id="projects-loading" class="text-center">
                 <div class="bg-gray-900 p-12 rounded-xl border border-gray-800 max-w-2xl mx-auto">
-                    <i class="fab fa-github text-6xl text-gray-400 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4">Explore My GitHub</h3>
-                    <p class="text-gray-400 mb-8 leading-relaxed">
-                        Check out my latest projects and contributions on GitHub. 
-                        I'm constantly working on new and exciting projects!
-                    </p>
-                    <a href="https://github.com/ClayzaAubert" 
-                       target="_blank"
-                       class="inline-flex items-center gap-3 bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                    <div class="loading-pulse">
+                        <i class="fas fa-spinner fa-spin text-4xl text-gray-400 mb-4"></i>
+                        <p class="text-gray-400">Loading projects from GitHub...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="projects-grid hidden">
+                <!-- Projects will be loaded here dynamically -->
+            </div>
+
+            <!-- Error State -->
+            <div id="projects-error" class="text-center hidden">
+                <div class="bg-gray-900 p-12 rounded-xl border border-gray-800 max-w-2xl mx-auto">
+                    <i class="fas fa-exclamation-triangle text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Unable to Load Projects</h3>
+                    <p class="text-gray-400 mb-8">There was an issue loading projects from GitHub.</p>
+                    <a href="https://github.com/ClayzaAubert" target="_blank"
+                        class="inline-flex items-center gap-3 bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                         <i class="fab fa-github"></i>
                         Visit GitHub Profile
                     </a>
@@ -479,14 +628,13 @@
                 Interested in collaborating or have a project in mind? Let's build something amazing together!
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="https://github.com/ClayzaAubert" 
-                   target="_blank"
-                   class="flex items-center gap-3 bg-gray-900 border border-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-800 transition-colors">
+                <a href="https://github.com/ClayzaAubert" target="_blank"
+                    class="flex items-center gap-3 bg-gray-900 border border-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-800 transition-colors">
                     <i class="fab fa-github text-xl"></i>
                     GitHub
                 </a>
-                <a href="mailto:care@maelyn.my.id" 
-                   class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                <a href="mailto:clayza.aubert@maelyn.my.id"
+                    class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                     <i class="fas fa-envelope text-xl"></i>
                     Get In Touch
                 </a>
@@ -540,93 +688,309 @@
 
         // Animate skill tags on hover
         document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', function() {
+            tag.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.05)';
             });
-            
-            tag.addEventListener('mouseleave', function() {
+
+            tag.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1)';
             });
         });
+
+        // Discord Status Function
+        async function fetchDiscordStatus() {
+            try {
+                const response = await fetch(`https://api.lanyard.rest/v1/users/869009902599815219`);
+                const data = await response.json();
+
+                if (data.success && data.data) {
+                    const user = data.data;
+                    const status = user.discord_status;
+
+                    // Map warna dot status
+                    const statusMapDot = {
+                        online: "status-online",
+                        idle: "status-idle",
+                        dnd: "status-dnd",
+                        offline: "status-offline"
+                    };
+
+                    // Map status text
+                    const statusTextMap = {
+                        online: "🟢 Online",
+                        idle: "🟡 Idle",
+                        dnd: "🔴 Do Not Disturb",
+                        offline: "⚫ Offline"
+                    };
+
+                    // Update dot
+                    const statusDot = document.getElementById("status-dot");
+                    statusDot.className = `absolute bottom-1 right-1 w-5 h-5 rounded-full border-2 border-gray-900 ${statusMapDot[status] || "status-offline"}`;
+
+                    // Ambil activity detail
+                    let activityText = "";
+                    let activityTime = "";
+                    if (user.activities && user.activities.length > 0) {
+                        const activity = user.activities[0];
+                        if (activity.type === 0) activityText = `🎮 Playing ${activity.name}`;
+                        if (activity.type === 2) activityText = `🎵 Listening to ${activity.name}`;
+                        if (activity.type === 3) activityText = `👀 Watching ${activity.name}`;
+                        if (activity.type === 4) activityText = `💬 ${activity.state || "Status"}`;
+
+                        // Waktu mulai
+                        if (activity.timestamps && activity.timestamps.start) {
+                            const start = new Date(activity.timestamps.start);
+                            const hours = String(start.getHours()).padStart(2, '0');
+                            const minutes = String(start.getMinutes()).padStart(2, '0');
+                            activityTime = `⏱ Since ${hours}:${minutes}`;
+                        }
+                    }
+
+                    // Device aktif
+                    const devices = [];
+                    if (user.active_on_discord_desktop) devices.push("💻 Desktop");
+                    if (user.active_on_discord_mobile) devices.push("📱 Mobile");
+                    if (user.active_on_discord_web) devices.push("🌐 Web");
+                    const deviceText = devices.length ? `Devices: ${devices.join(", ")}` : "";
+
+                    // Guild tag
+                    const guildTag = user.discord_user?.primary_guild?.tag
+                        ? `🏷 Guild: ${user.discord_user.primary_guild.tag}`
+                        : "";
+
+                    // Gabungkan semua info
+                    const badge = document.getElementById("status-badge");
+                    badge.innerHTML = `
+                <div>${statusTextMap[status] || "⚫ Unknown"}</div>
+                ${activityText ? `<div>${activityText}</div>` : ""}
+                ${activityTime ? `<div>${activityTime}</div>` : ""}
+                ${guildTag ? `<div>${guildTag}</div>` : ""}
+            `;
+                    badge.className = "text-gray-400 text-sm space-y-1";
+                } else {
+                    throw new Error("Failed to fetch Discord status");
+                }
+            } catch (error) {
+                console.error("Discord status error:", error);
+                const statusDot = document.getElementById("status-dot");
+                const badge = document.getElementById("status-badge");
+
+                statusDot.className = "absolute bottom-1 right-1 w-5 h-5 rounded-full border-2 border-gray-900 status-offline";
+                badge.textContent = "Status Unavailable";
+                badge.className = "text-gray-400 text-sm";
+            }
+        }
+
+        // GitHub Projects Function
+        async function fetchGitHubProjects() {
+            try {
+                const response = await fetch('https://api.github.com/users/ClayzaAubert/repos?sort=updated&per_page=12');
+                const repos = await response.json();
+
+                const projectsGrid = document.getElementById('projects-grid');
+                const projectsLoading = document.getElementById('projects-loading');
+                const projectsError = document.getElementById('projects-error');
+
+                if (repos && Array.isArray(repos)) {
+                    const filteredRepos = repos
+                        .filter(repo => !repo.fork && !repo.archived)
+                        .sort((a, b) => {
+                            const scoreA = (a.description ? 2 : 0) + a.stargazers_count + (a.language ? 1 : 0);
+                            const scoreB = (b.description ? 2 : 0) + b.stargazers_count + (b.language ? 1 : 0);
+                            return scoreB - scoreA;
+                        })
+                        .slice(0, 9);
+
+                    projectsGrid.innerHTML = filteredRepos.map(repo => {
+                        const language = repo.language || 'Unknown';
+                        const languageClass = `language-${language.toLowerCase().replace(/[^a-z]/g, '')}`;
+
+                        return `
+                    <div class="project-card p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white truncate pr-4">${repo.name}</h3>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm flex-shrink-0">
+                                <i class="fas fa-star"></i>
+                                <span>${repo.stargazers_count}</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-4 line-clamp-3">
+                            ${repo.description || 'No description available.'}
+                        </p>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <span class="project-language ${languageClass} language-default">
+                                    ${language}
+                                </span>
+                                <div class="flex items-center gap-3 text-gray-400 text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-code-branch"></i>
+                                        ${repo.forks_count}
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-2">
+                                ${repo.homepage ? `
+                                    <a href="${repo.homepage}" 
+                                       target="_blank" 
+                                       class="p-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+                                       title="Live Demo">
+                                        <i class="fas fa-external-link-alt text-sm"></i>
+                                    </a>
+                                ` : ''}
+                                <a href="${repo.html_url}" 
+                                   target="_blank" 
+                                   class="p-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors"
+                                   title="View Source">
+                                    <i class="fab fa-github text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 text-xs text-gray-500">
+                            Updated: ${new Date(repo.updated_at).toLocaleDateString()}
+                        </div>
+                    </div>
+                `;
+                    }).join('');
+
+                    // Tambahkan GitHub link card
+                    projectsGrid.innerHTML += `
+                <div class="project-card p-6 rounded-xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-dashed border-gray-600">
+                    <i class="fab fa-github text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">View More Projects</h3>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        Explore all my repositories and contributions on GitHub
+                    </p>
+                    <a href="https://github.com/ClayzaAubert" 
+                       target="_blank"
+                       class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors text-sm">
+                        <i class="fab fa-github"></i>
+                        Visit GitHub
+                    </a>
+                </div>
+            `;
+
+                    projectsLoading.classList.add('hidden');
+                    projectsGrid.classList.remove('hidden');
+
+                    // Fungsi untuk atur col-span terakhir
+                    function adjustLastCard() {
+                        const gridCols = window.getComputedStyle(projectsGrid).gridTemplateColumns.split(' ').length;
+                        const cards = projectsGrid.querySelectorAll('.project-card');
+                        cards.forEach(card => card.classList.remove('col-span-full'));
+
+                        if (gridCols > 2 && cards.length % gridCols === 1) {
+                            cards[cards.length - 1].classList.add('col-span-full');
+                        }
+                    }
+
+                    adjustLastCard();
+                    window.addEventListener('resize', adjustLastCard);
+
+                } else {
+                    throw new Error('Invalid response from GitHub API');
+                }
+            } catch (error) {
+                console.error('GitHub projects error:', error);
+                document.getElementById('projects-loading').classList.add('hidden');
+                document.getElementById('projects-error').classList.remove('hidden');
+            }
+        }
+
+        // Initialize functions when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchDiscordStatus();
+            fetchGitHubProjects();
+
+            // Update Discord status every 30 seconds
+            setInterval(fetchDiscordStatus, 30000);
+        });
     </script>
-	<script>
-	"use strict";
 
-const screen = document.getElementById("screen");
-const xmlns = "http://www.w3.org/2000/svg";
-const xlinkns = "http://www.w3.org/1999/xlink";
+    <!-- Dragon Animation Script -->
+    <script>
+        "use strict";
 
-window.addEventListener(
-	"pointermove",
-	(e) => {
-		pointer.x = e.clientX;
-		pointer.y = e.clientY;
-		rad = 0;
-	},
-	false
-);
+        const screen = document.getElementById("screen");
+        const xmlns = "http://www.w3.org/2000/svg";
+        const xlinkns = "http://www.w3.org/1999/xlink";
 
-const resize = () => {
-	width = window.innerWidth;
-	height = window.innerHeight;
-};
+        window.addEventListener(
+            "pointermove",
+            (e) => {
+                pointer.x = e.clientX;
+                pointer.y = e.clientY;
+                rad = 0;
+            },
+            false
+        );
 
-let width, height;
-window.addEventListener("resize", () => resize(), false);
-resize();
+        const resize = () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+        };
 
-const prepend = (use, i) => {
-	const elem = document.createElementNS(xmlns, "use");
-	elems[i].use = elem;
-	elem.setAttributeNS(xlinkns, "xlink:href", "#" + use);
-	screen.prepend(elem);
-};
+        let width, height;
+        window.addEventListener("resize", () => resize(), false);
+        resize();
 
-const N = 40;
+        const prepend = (use, i) => {
+            const elem = document.createElementNS(xmlns, "use");
+            elems[i].use = elem;
+            elem.setAttributeNS(xlinkns, "xlink:href", "#" + use);
+            screen.prepend(elem);
+        };
 
-const elems = [];
-for (let i = 0; i < N; i++) elems[i] = { use: null, x: width / 2, y: 0 };
-const pointer = { x: width / 2, y: height / 2 };
-const radm = Math.min(pointer.x, pointer.y) - 20;
-let frm = Math.random();
-let rad = 0;
+        const N = 40;
 
-for (let i = 1; i < N; i++) {
-	if (i === 1) prepend("Cabeza", i);
-	else if (i === 8 || i === 14) prepend("Aletas", i);
-	else prepend("Espina", i);
-}
+        const elems = [];
+        for (let i = 0; i < N; i++) elems[i] = { use: null, x: width / 2, y: 0 };
+        const pointer = { x: width / 2, y: height / 2 };
+        const radm = Math.min(pointer.x, pointer.y) - 20;
+        let frm = Math.random();
+        let rad = 0;
 
-const run = () => {
-	requestAnimationFrame(run);
-	let e = elems[0];
-	const ax = (Math.cos(3 * frm) * rad * width) / height;
-	const ay = (Math.sin(4 * frm) * rad * height) / width;
-	e.x += (ax + pointer.x - e.x) / 10;
-	e.y += (ay + pointer.y - e.y) / 10;
-	for (let i = 1; i < N; i++) {
-		let e = elems[i];
-		let ep = elems[i - 1];
-		const a = Math.atan2(e.y - ep.y, e.x - ep.x);
-		e.x += (ep.x - e.x + (Math.cos(a) * (100 - i)) / 5) / 4;
-		e.y += (ep.y - e.y + (Math.sin(a) * (100 - i)) / 5) / 4;
-		const s = (162 + 4 * (1 - i)) / 50;
-		e.use.setAttributeNS(
-			null,
-			"transform",
-			`translate(${(ep.x + e.x) / 2},${(ep.y + e.y) / 2}) rotate(${(180 / Math.PI) * a
-			}) translate(${0},${0}) scale(${s},${s})`
-		);
-	}
-	if (rad < radm) rad++;
-	frm += 0.003;
-	if (rad > 60) {
-		pointer.x += (width / 2 - pointer.x) * 0.05;
-		pointer.y += (height / 2 - pointer.y) * 0.05;
-	}
-};
+        for (let i = 1; i < N; i++) {
+            if (i === 1) prepend("Cabeza", i);
+            else if (i === 8 || i === 14) prepend("Aletas", i);
+            else prepend("Espina", i);
+        }
 
-run();
-</script>
+        const run = () => {
+            requestAnimationFrame(run);
+            let e = elems[0];
+            const ax = (Math.cos(3 * frm) * rad * width) / height;
+            const ay = (Math.sin(4 * frm) * rad * height) / width;
+            e.x += (ax + pointer.x - e.x) / 10;
+            e.y += (ay + pointer.y - e.y) / 10;
+            for (let i = 1; i < N; i++) {
+                let e = elems[i];
+                let ep = elems[i - 1];
+                const a = Math.atan2(e.y - ep.y, e.x - ep.x);
+                e.x += (ep.x - e.x + (Math.cos(a) * (100 - i)) / 5) / 4;
+                e.y += (ep.y - e.y + (Math.sin(a) * (100 - i)) / 5) / 4;
+                const s = (162 + 4 * (1 - i)) / 50;
+                e.use.setAttributeNS(
+                    null,
+                    "transform",
+                    `translate(${(ep.x + e.x) / 2},${(ep.y + e.y) / 2}) rotate(${(180 / Math.PI) * a
+                    }) translate(${0},${0}) scale(${s},${s})`
+                );
+            }
+            if (rad < radm) rad++;
+            frm += 0.003;
+            if (rad > 60) {
+                pointer.x += (width / 2 - pointer.x) * 0.05;
+                pointer.y += (height / 2 - pointer.y) * 0.05;
+            }
+        };
+
+        run();
+    </script>
 </body>
+
 </html>
