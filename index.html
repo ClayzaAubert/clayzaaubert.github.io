@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clayza Aubert - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <meta name="description"
-        content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
     <meta name="keywords" content="Portfolio, Clayza Aubert, Aubert">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Clayza_Aubert">
@@ -16,980 +16,1673 @@
     <meta http-equiv="content-language" content="id-ID">
     <meta property="og:title" content="Portfolio - Clayza Aubert">
     <meta property="og:site_name" content="Portfolio - Clayza Aubert">
-    <meta property="og:description"
-        content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
-    <meta property="og:image" content="https://files.catbox.moe/x61007.png">
+    <meta property="og:description" content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/92805294?v=4">
     <meta property="og:url" content="https://clayza.is-a.dev">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ClayzaAubert">
     <meta name="twitter:title" content="Portfolio - Clayza Aubert">
-    <meta name="twitter:description"
-        content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
-    <meta name="twitter:image" content="https://files.catbox.moe/x61007.png">
+    <meta name="twitter:description" content="Saya hanyalah pemula yang hobi dalam programming, Saya hanya ingin belajar untuk membuat project yang menarik bagi saya.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/92805294?v=4">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/92805294?v=4" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Patrick+Hand&family=Architects+Daughter&display=swap"
+        rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
         * {
-            font-family: "JetBrains Mono", monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        body {
+            font-family: 'Patrick Hand', cursive;
+            background-color: #fdfbf7;
+            color: #2d2d2d;
+            background-image:
+                radial-gradient(circle at 25% 25%, rgba(255, 77, 77, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(45, 93, 161, 0.05) 0%, transparent 50%),
+                radial-gradient(#e5e0d8 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 24px 24px;
+            position: relative;
         }
 
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Kalam', cursive;
+            font-weight: 700;
         }
 
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        .handwritten-alt {
+            font-family: 'Architects Daughter', cursive;
         }
 
-        .skill-tag {
-            transition: all 0.2s ease-in-out;
+        .wobbly {
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
         }
 
-        .skill-tag:hover {
-            transform: scale(1.05);
-            background-color: #ffffff;
-            color: #000000;
+        .wobbly-md {
+            border-radius: 185px 25px 155px 25px / 25px 155px 25px 185px;
         }
 
-        .scroll-smooth {
-            scroll-behavior: smooth;
+        .wobbly-sm {
+            border-radius: 125px 15px 95px 15px / 15px 95px 15px 125px;
         }
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .wobbly-alt {
+            border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
         }
 
-        ::-webkit-scrollbar-track {
-            background: #111111;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333333;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555555;
-        }
-
-        svg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            filter: sepia(20%);
-            z-index: -1;
-        }
-
-        /* Discord Status Styles */
-        .discord-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #5865F2;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .discord-status:hover {
-            background: #4752C4;
-            transform: translateY(-2px);
-        }
-
-        .status-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-
-        .status-online {
-            background-color: #23A55A;
-        }
-
-        .status-idle {
-            background-color: #F0B232;
-        }
-
-        .status-dnd {
-            background-color: #F23F43;
-        }
-
-        .status-offline {
-            background-color: #80848E;
-        }
-
-        /* Loading animation */
-        .loading-pulse {
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
+        @keyframes gentle-bounce {
 
             0%,
             100% {
-                opacity: 1;
+                transform: translateY(0) rotate(15deg);
             }
 
             50% {
-                opacity: 0.5;
+                transform: translateY(-15px) rotate(15deg);
             }
         }
 
-        /* Project card styles */
-        .project-card {
-            background: linear-gradient(145deg, #1f2937, #111827);
-            border: 1px solid #374151;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
         }
 
-        .project-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            border-color: #6B7280;
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
         }
 
-        .project-language {
+        @keyframes draw-line {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .bounce-gentle {
+            animation: gentle-bounce 3s ease-in-out infinite;
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .wiggle {
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px #2d2d2d;
+        }
+
+        .hard-shadow-sm {
+            box-shadow: 3px 3px 0px 0px rgba(45, 45, 45, 0.1);
+        }
+
+        .hard-shadow-lg {
+            box-shadow: 8px 8px 0px 0px #2d2d2d;
+        }
+
+        .hard-shadow-red {
+            box-shadow: 6px 6px 0px 0px #ff4d4d;
+        }
+
+        .hard-shadow-blue {
+            box-shadow: 6px 6px 0px 0px #2d5da1;
+        }
+
+        .btn-hand-drawn {
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            border: 3px solid #2d2d2d;
+            box-shadow: 4px 4px 0px 0px #2d2d2d;
+            transition: all 0.15s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-hand-drawn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: #ff4d4d;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-hand-drawn:hover::before {
+            width: 300%;
+            height: 300%;
+        }
+
+        .btn-hand-drawn:hover {
+            color: white;
+            box-shadow: 2px 2px 0px 0px #2d2d2d;
+            transform: translate(2px, 2px);
+        }
+
+        .btn-hand-drawn:active {
+            box-shadow: none;
+            transform: translate(4px, 4px);
+        }
+
+        .card-hand-drawn {
+            background: white;
+            border: 3px solid #2d2d2d;
+            border-radius: 185px 25px 155px 25px / 25px 155px 25px 185px;
+            box-shadow: 4px 4px 0px 0px rgba(45, 45, 45, 0.15);
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .card-hand-drawn:hover {
+            box-shadow: 8px 8px 0px 0px rgba(45, 45, 45, 0.25);
+            transform: rotate(1deg) translateY(-4px);
+        }
+
+        .tape-decoration {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-3deg);
+            width: 120px;
+            height: 25px;
+            background: rgba(220, 220, 220, 0.4);
+            border-left: 2px dashed rgba(0, 0, 0, 0.1);
+            border-right: 2px dashed rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tape-decoration::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .tack-decoration {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #ff4d4d 0%, #cc3333 100%);
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .tack-decoration::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+
+        .torn-edge {
+            position: relative;
+        }
+
+        .torn-edge::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(45deg, transparent 33.33%, #fdfbf7 33.33%, #fdfbf7 66.66%, transparent 66.66%),
+                linear-gradient(-45deg, transparent 33.33%, #fdfbf7 33.33%, #fdfbf7 66.66%, transparent 66.66%);
+            background-size: 16px 8px;
+            background-position: 0 0;
+        }
+
+        .wavy-underline {
+            text-decoration: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%232d2d2d' stroke-width='1.5' d='M0,3 Q5,0 10,3 T20,3'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-position: 0 100%;
+            background-size: 20px 4px;
+            padding-bottom: 6px;
+        }
+
+        .skill-badge {
+            border-radius: 125px 15px 95px 15px / 15px 95px 15px 125px;
+            border: 2px solid #2d2d2d;
+            background: white;
+            padding: 0.5rem 1rem;
+            transition: all 0.15s ease;
             display: inline-block;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 500;
+            cursor: pointer;
         }
 
-        .language-javascript {
-            background-color: #F7DF1E;
-            color: #000;
+        .skill-badge:hover {
+            background: #fff9c4;
+            transform: rotate(-3deg) scale(1.1);
+            box-shadow: 3px 3px 0px 0px rgba(45, 45, 45, 0.2);
         }
 
-        .language-python {
-            background-color: #3776AB;
-            color: #fff;
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid #ff4d4d;
+            white-space: nowrap;
+            animation: typewriter 3s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
         }
 
-        .language-html {
-            background-color: #E34F26;
-            color: #fff;
-        }
-
-        .language-css {
-            background-color: #1572B6;
-            color: #fff;
-        }
-
-        .language-typescript {
-            background-color: #3178C6;
-            color: #fff;
-        }
-
-        .language-default {
-            background-color: #6B7280;
-            color: #fff;
-        }
-
-        /* Grid responsive improvements */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        @media (max-width: 640px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
+        .status-indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            border: 2px solid #2d2d2d;
+            box-shadow: 2px 2px 0px 0px rgba(45, 45, 45, 0.2);
         }
 
         .status-online {
             background-color: #43b581;
         }
 
-        /* Green */
         .status-idle {
             background-color: #faa61a;
         }
 
-        /* Yellow */
         .status-dnd {
             background-color: #f04747;
         }
 
-        /* Red */
         .status-offline {
             background-color: #747f8d;
         }
 
-        /* Gray */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .scribble-circle {
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: scribble 2s ease-in-out forwards;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .skeleton {
+            background: linear-gradient(90deg, #e5e0d8 25%, #f0ebe3 50%, #e5e0d8 75%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite;
+        }
+
+        .sticky-note {
+            background: #fff9c4;
+            position: relative;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-note::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-width: 0 16px 16px 0;
+            border-style: solid;
+            border-color: #e5e0d8 #fdfbf7;
+        }
+
+        .doodle-star {
+            color: #ff4d4d;
+            font-size: 1.5rem;
+            display: inline-block;
+            animation: wiggle 3s ease-in-out infinite;
+        }
+
+        .paper-texture {
+            position: relative;
+        }
+
+        .paper-texture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3CfeColorMatrix values='0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.02 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' /%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #fff9c4 50%);
+            padding: 0 4px;
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            line-height: 0;
+            color: #ff4d4d;
+            opacity: 0.3;
+        }
     </style>
 </head>
 
-<body class="bg-black text-white scroll-smooth">
-
-    <svg xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
-                <stop offset="50%" style="stop-color:#2C2C2C;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="headGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#333333;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
-            </linearGradient>
-            <g id="Cabeza" transform="matrix(1, 0, 0, 1, 0, 0)">
-                <path style="fill:#FFFFFF;fill-opacity:1"
-                    d="M-28.9,-1.1L-28.55 -1.95Q-28.1 -3.1 -27.25 -2.95L-26.7 -2.95Q-27.7 -1.65 -28.9 -1.1M-18.35,-1.8Q-15.1 -10.3 -9.6 -6.05Q-15.1 -6.2 -18.35 -1.8M-18.35,1.1Q-15.1 5.45 -9.6 5.35Q-15.1 9.55 -18.35 1.1M-26.7,2.2L-27.25 2.25Q-28.1 2.4 -28.55 1.2L-28.9 0.35Q-27.7 0.9 -26.7 2.2" />
-                <path style="fill:#000000;fill-opacity:1"
-                    d="M-21.05,-8.25Q-13.6 -15.95 -1.3 -12.1Q-7.85 -8.5 -5.85 -4.35Q-2.3 -4.85 10.5 0.15Q0 4.35 -5.85 3.65Q-7.85 7.75 -1.25 12.45Q-13.6 15.2 -21.05 7.5Q-29.55 4.05 -30.2 -0.35Q-29.55 -4.8 -21.05 -8.25M-26.7,-2.95L-27.25 -2.95Q-28.1 -3.1 -28.55 -1.95L-28.9 -1.1Q-27.7 -1.65 -26.7 -2.95M-9.6,-6.05Q-15.1 -10.3 -18.35 -1.8Q-15.1 -6.2 -9.6 -6.05M-9.6,5.35Q-15.1 5.45 -18.35 1.1Q-15.1 9.55 -9.6 5.35M-28.9,0.35L-28.55 1.2Q-28.1 2.4 -27.25 2.25L-26.7 2.2Q-27.7 0.9 -28.9 0.35" />
-                <circle cx="-15" cy="-4" r="3.5" fill="#FF4444" stroke="#000" stroke-width="0.6" />
-                <circle cx="-14" cy="-4" r="2.2" fill="#FF0000" />
-                <circle cx="-13" cy="-4.5" r="1.2" fill="#FFAAAA" />
-                <circle cx="-12.5" cy="-5" r="0.6" fill="#FFFFFF" opacity="0.9" />
-                <circle cx="-15" cy="4" r="3.5" fill="#FF4444" stroke="#000" stroke-width="0.6" />
-                <circle cx="-14" cy="4" r="2.2" fill="#FF0000" />
-                <circle cx="-13" cy="4.5" r="1.2" fill="#FFAAAA" />
-                <circle cx="-12.5" cy="5" r="0.6" fill="#FFFFFF" opacity="0.9" />
-                <path fill="#2C2C2C" stroke="#000" stroke-width="0.8"
-                    d="M10.5,-2 Q20,-1 24,0 Q20,1 10.5,2 Q14,0 10.5,-2 Z" />
-                <ellipse cx="20" cy="-1" rx="1" ry="0.7" fill="#000" />
-                <ellipse cx="20" cy="1" rx="1" ry="0.7" fill="#000" />
-                <path fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"
-                    d="M24,-2 Q32,-4 36,-2 Q34,-1 32,0" />
-                <path fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"
-                    d="M24,2 Q32,4 36,2 Q34,1 32,0" />
-                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-25,-8 Q-27,-14 -23,-16 Q-21,-14 -23,-8" />
-                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-18,-10 Q-20,-15 -16,-17 Q-14,-15 -16,-10" />
-                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-25,8 Q-27,14 -23,16 Q-21,14 -23,8" />
-                <path fill="#333" stroke="#000" stroke-width="0.5" d="M-18,10 Q-20,15 -16,17 Q-14,15 -16,10" />
-                <circle cx="-8" cy="-6" r="1.5" fill="#444" opacity="0.7" />
-                <circle cx="-2" cy="-4" r="1.3" fill="#444" opacity="0.7" />
-                <circle cx="4" cy="-2" r="1.1" fill="#444" opacity="0.7" />
-                <circle cx="-8" cy="6" r="1.5" fill="#444" opacity="0.7" />
-                <circle cx="-2" cy="4" r="1.3" fill="#444" opacity="0.7" />
-                <circle cx="4" cy="2" r="1.1" fill="#444" opacity="0.7" />
-            </g>
-
-            <g id="Espina">
-                <ellipse cx="-8" cy="0" rx="8" ry="8" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8" />
-
-                <ellipse cx="8" cy="0" rx="10" ry="6" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8" />
-
-                <ellipse cx="25" cy="0" rx="8" ry="5" fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8" />
-
-                <path fill="url(#bodyGradient)" stroke="#000" stroke-width="0.8"
-                    d="M33,-3 Q40,-4 45,-2 Q50,0 48,3 Q45,5 40,4 Q35,2 33,3 Q36,0 33,-3 Z" />
-
-                <path fill="#333" stroke="#000" stroke-width="0.6" d="M48,0 Q55,-2 58,0 Q55,2 50,2 Q52,1 48,0" />
-                <path fill="#333" stroke="#000" stroke-width="0.4" d="M55,-1 Q60,-3 62,-1 Q60,1 57,1" />
-                <path fill="#333" stroke="#000" stroke-width="0.4" d="M55,1 Q60,3 62,1 Q60,-1 57,-1" />
-
-                <ellipse cx="-15" cy="-8" rx="1.5" ry="3" fill="#333" opacity="0.7" />
-                <ellipse cx="-5" cy="-8" rx="1.2" ry="2.5" fill="#333" opacity="0.7" />
-                <ellipse cx="8" cy="-6" rx="1.2" ry="2" fill="#333" opacity="0.7" />
-                <ellipse cx="20" cy="-5" rx="1" ry="1.8" fill="#333" opacity="0.7" />
-                <ellipse cx="32" cy="-3" rx="0.8" ry="1.5" fill="#333" opacity="0.7" />
-
-                <circle cx="-10" cy="-4" r="1.5" fill="#444" opacity="0.5" />
-                <circle cx="-2" cy="-3" r="1.3" fill="#444" opacity="0.5" />
-                <circle cx="12" cy="-3" r="1.3" fill="#444" opacity="0.5" />
-                <circle cx="22" cy="-2" r="1.1" fill="#444" opacity="0.5" />
-                <circle cx="35" cy="-2" r="1" fill="#444" opacity="0.5" />
-
-                <circle cx="-10" cy="4" r="1.5" fill="#444" opacity="0.5" />
-                <circle cx="-2" cy="3" r="1.3" fill="#444" opacity="0.5" />
-                <circle cx="12" cy="3" r="1.3" fill="#444" opacity="0.5" />
-                <circle cx="22" cy="2" r="1.1" fill="#444" opacity="0.5" />
-                <circle cx="35" cy="2" r="1" fill="#444" opacity="0.5" />
-            </g>
-
-            <g id="Aletas">
-                <ellipse cx="-5" cy="-10" rx="3" ry="8" fill="#333" stroke="#000" stroke-width="0.6" />
-                <circle cx="-5" cy="-18" r="2" fill="#333" stroke="#000" stroke-width="0.5" />
-                <path fill="#000" stroke-width="0.3" d="M-7,-20 L-8,-25 M-5,-20 L-5,-25 M-3,-20 L-2,-25" />
-
-                <ellipse cx="-5" cy="10" rx="3" ry="8" fill="#333" stroke="#000" stroke-width="0.6" />
-                <circle cx="-5" cy="18" r="2" fill="#333" stroke="#000" stroke-width="0.5" />
-                <path fill="none" stroke="#000" stroke-width="0.3" d="M-7,20 L-8,25 M-5,20 L-5,25 M-3,20 L-2,25" />
-
-                <ellipse cx="15" cy="-8" rx="2.5" ry="6" fill="#333" stroke="#000" stroke-width="0.6" />
-                <circle cx="15" cy="-14" r="1.8" fill="#333" stroke="#000" stroke-width="0.5" />
-                <path fill="none" stroke="#000" stroke-width="0.3"
-                    d="M13,-16 L12,-20 M15,-16 L15,-20 M17,-16 L18,-20" />
-
-                <ellipse cx="15" cy="8" rx="2.5" ry="6" fill="#333" stroke="#000" stroke-width="0.6" />
-                <circle cx="15" cy="14" r="1.8" fill="#333" stroke="#000" stroke-width="0.5" />
-                <path fill="none" stroke="#000" stroke-width="0.3" d="M13,16 L12,20 M15,16 L15,20 M17,16 L18,20" />
-            </g>
-        </defs>
-
-        <g id="screen">
-            <use href="#Aletas" />
-            <use href="#Espina" />
-            <use href="#Cabeza" />
-        </g>
-    </svg>
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-gray-800 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-xl font-bold gradient-text">Clayza Aubert</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-gray-300 transition-colors">Home</a>
-                    <a href="#about" class="hover:text-gray-300 transition-colors">About</a>
-                    <a href="#skills" class="hover:text-gray-300 transition-colors">Skills</a>
-                    <a href="#projects" class="hover:text-gray-300 transition-colors">Projects</a>
-                    <a href="#contact" class="hover:text-gray-300 transition-colors">Contact</a>
+<body class="antialiased overflow-x-hidden">
+    <nav class="border-b-3 border-dashed border-[#2d2d2d] py-5 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="text-3xl md:text-4xl font-bold">
+                    <span class="wavy-underline">Clayza</span>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+
+                <span class="doodle-star hidden md:inline-block w-9 h-9 text-yellow-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full">
+                        <path
+                            d="m65.44 18.39l-2.327 9.717C53.95 66.384 49.07 107.884 49.07 151.293c0 93.415 23.097 178.085 61.047 240.014c17.218 28.096 37.652 51.6 60.447 68.92c26.69 21.257 56.353 32.962 87.377 32.962c.364 0 1.147-.12 1.927-.25c.623.008 1.247.02 1.87.02c60.13 0 113.67-39.724 151.62-101.653s61.047-146.598 61.047-240.014c0-41.557-4.858-81.203-13.256-118.012l-2.324-10.19l-9.582 4.176c-50.92 22.196-113.98 35.705-182.086 35.713a562 562 0 0 1-6.002-.103V62.8c-1.296 0-2.586-.017-3.88-.03c-69.783-2.053-125.493-18.078-182.545-40.698l-9.29-3.683zm380.816 28.747c6.792 32.774 10.824 67.647 10.824 104.156c0 90.547-22.596 172.38-58.494 230.963c-35.9 58.582-84.36 93.38-136.848 93.38c-.195 0-.39-.006-.584-.007v-63.987q-3.962.036-7.914-.163c-55.358-2.77-109.316-38.91-122.03-99.742l-2.355-11.256h94.895l37.404 14.207V80.206c1.946.042 3.896.078 5.862.098h.087c66.168 0 127.672-12.383 179.152-33.168zm-279.53 98.12c35.365 0 64.036 13.248 64.036 29.59c0 16.34-28.668 29.585-64.035 29.585c-35.365 0-64.036-13.246-64.036-29.586s28.67-29.588 64.037-29.588zm186.282 0c-35.367 0-64.035 13.248-64.035 29.59c0 16.34 28.67 29.585 64.035 29.585c35.367 0 64.035-13.246 64.035-29.586s-28.67-29.588-64.035-29.588zM152.572 319.17c14.72 45.053 57.247 71.428 101.602 73.646c44.8 2.24 90.238-19.45 110.416-73.646h-57.447l-44.204 16.187l-42.62-16.187z" />
+                    </svg>
+                </span>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-gray-800">
-            <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block hover:text-gray-300 transition-colors">Home</a>
-                <a href="#about" class="block hover:text-gray-300 transition-colors">About</a>
-                <a href="#skills" class="block hover:text-gray-300 transition-colors">Skills</a>
-                <a href="#projects" class="block hover:text-gray-300 transition-colors">Projects</a>
-                <a href="#contact" class="block hover:text-gray-300 transition-colors">Contact</a>
+
+            <div class="hidden md:flex gap-6 md:gap-8 items-center">
+                <a href="#home" class="text-lg hover:text-[#ff4d4d] transition-colors relative group">
+                    Home
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff4d4d] group-hover:w-full transition-all"></span>
+                </a>
+                <a href="#about" class="text-lg hover:text-[#ff4d4d] transition-colors relative group">
+                    About
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff4d4d] group-hover:w-full transition-all"></span>
+                </a>
+                <a href="#skills" class="text-lg hover:text-[#ff4d4d] transition-colors relative group">
+                    Skills
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff4d4d] group-hover:w-full transition-all"></span>
+                </a>
+                <a href="#projects" class="text-lg hover:text-[#ff4d4d] transition-colors relative group">
+                    Projects
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff4d4d] group-hover:w-full transition-all"></span>
+                </a>
+                <a href="#contact" class="btn-hand-drawn bg-white px-5 py-2 text-lg inline-block">
+                    Let's Talk!
+                </a>
             </div>
+            <button id="mobile-menu-btn"
+                class="md:hidden text-3xl hover:rotate-12 transition-transform z-50 relative">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto flex flex-col items-center text-center sm:text-left">
-
-            <!-- Avatar + Status -->
-            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-8">
-                <div class="relative flex-shrink-0">
-                    <img src="https://avatars.githubusercontent.com/u/92805294?v=4" alt="Clayza Aubert"
-                        class="w-32 h-32 sm:w-40 sm:h-40 aspect-square object-cover rounded-full border-4 border-gray-700 shadow-2xl">
-                    <span id="status-dot"
-                        class="absolute bottom-2 right-2 w-5 h-5 rounded-full border-2 border-gray-900"></span>
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-[#fdfbf7]/95 backdrop-blur-sm">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6 border-b-2 border-dashed border-[#2d2d2d]">
+                <div class="text-3xl font-bold">
+                    <span class="wavy-underline">Menu</span>
                 </div>
-                <div class="flex flex-col items-center sm:items-start">
-                    <h1 class="text-4xl sm:text-5xl font-bold">
-                        <span class="gradient-text">Clayza Aubert</span>
-                    </h1>
-                    <div id="status-badge"
-                        class="mt-2 px-3 py-1 text-sm rounded-full font-medium text-white bg-gray-700 text-center max-w-[220px] sm:max-w-xs break-words">
-                        Loading status...
+                <button id="mobile-menu-close"
+                    class="text-4xl hover:rotate-12 transition-transform text-[#ff4d4d]">✕</button>
+            </div>
+
+            <div class="flex-1 flex flex-col justify-center px-8 gap-6">
+                <a href="#home"
+                    class="text-3xl hover:text-[#ff4d4d] transition-colors font-bold transform hover:translate-x-2 transition-transform">
+                    <span class="inline-block mr-3">→</span> Home
+                </a>
+                <a href="#about"
+                    class="text-3xl hover:text-[#ff4d4d] transition-colors font-bold transform hover:translate-x-2 transition-transform">
+                    <span class="inline-block mr-3">→</span> About
+                </a>
+                <a href="#skills"
+                    class="text-3xl hover:text-[#ff4d4d] transition-colors font-bold transform hover:translate-x-2 transition-transform">
+                    <span class="inline-block mr-3">→</span> Skills
+                </a>
+                <a href="#projects"
+                    class="text-3xl hover:text-[#ff4d4d] transition-colors font-bold transform hover:translate-x-2 transition-transform">
+                    <span class="inline-block mr-3">→</span> Projects
+                </a>
+                <a href="#contact"
+                    class="text-3xl hover:text-[#ff4d4d] transition-colors font-bold transform hover:translate-x-2 transition-transform">
+                    <span class="inline-block mr-3">→</span> Contact
+                </a>
+            </div>
+
+            <div class="p-6 text-center border-t-2 border-dashed border-[#2d2d2d]">
+                <p class="text-lg handwritten-alt text-[#2d2d2d]/70">Let's build something amazing!</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="py-16 md:py-24 lg:py-32 relative overflow-hidden">
+        <svg class="absolute top-20 left-10 w-24 h-24 md:w-32 md:h-32 opacity-20 hidden lg:block" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#ff4d4d" stroke-width="3" stroke-dasharray="5,5"
+                class="scribble-circle" />
+        </svg>
+        <svg class="absolute bottom-20 right-10 w-32 h-32 md:w-40 md:h-40 opacity-20 hidden lg:block"
+            viewBox="0 0 100 100">
+            <path d="M20,50 L40,30 L60,60 L80,40" fill="none" stroke="#2d5da1" stroke-width="3"
+                stroke-dasharray="5,5" />
+        </svg>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+                <div class="space-y-4 md:space-y-6">
+                    <div class="inline-block">
+                        <div id="discord-status"
+                            class="card-hand-drawn px-4 md:px-5 py-2 md:py-3 inline-flex items-center gap-2 md:gap-3 transform -rotate-1 hover:rotate-0 transition-all">
+                            <span class="status-indicator status-offline"></span>
+                            <div>
+                                <div id="status-text" class="text-sm md:text-base font-bold">Loading...</div>
+                                <div id="activity-text" class="text-xs md:text-sm text-[#2d2d2d]/70 hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-3 md:mb-4 leading-tight">
+                            <span class="inline-block hover:rotate-3 transition-transform">Clayza</span>
+                            <span class="inline-block hover:-rotate-2 transition-transform"> Aubert</span><span
+                                class="inline-block rotate-12 text-[#ff4d4d] hover:scale-125 transition-transform cursor-pointer">!</span>
+                        </h1>
+
+                        <div class="mb-4 md:mb-6 h-12 md:h-16">
+                            <p id="typing-text"
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#2d2d2d]/90 handwritten-alt">
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+                        <span class="highlight">Building creative</span> and functional applications with
+                        <span class="font-bold text-[#ff4d4d]">Python</span>,
+                        <span class="font-bold text-[#2d5da1]">Node.js</span>, and modern technologies
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 pt-2 md:pt-4">
+                        <a href="https://github.com/ClayzaAubert" target="_blank"
+                            class="btn-hand-drawn bg-white px-4 sm:px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl inline-flex items-center justify-center gap-2 group">
+                            <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            <span>GitHub Profile</span>
+                            <span class="inline-block group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                        <a href="#projects"
+                            class="btn-hand-drawn bg-[#e5e0d8] px-4 sm:px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl inline-flex items-center justify-center gap-2 group">
+                            <span>View Projects</span>
+                            <span class="inline-block group-hover:translate-y-1 transition-transform">↓</span>
+                        </a>
+                        <a href="https://trakteer.id/clayza" target="_blank"
+                            class="btn-hand-drawn bg-[#ff4d4d] text-white border-[#2d2d2d] px-4 sm:px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl inline-flex items-center justify-center gap-2 group">
+                            <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3" />
+                            </svg>
+                            <span>Support Me</span>
+                            <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-125 transition-transform"
+                                viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <svg class="hidden lg:block w-32 h-32 xl:w-40 xl:h-40 ml-12 -mt-4" viewBox="0 0 150 150"
+                        fill="none">
+                        <path d="M20 120 Q 50 80, 80 70 T 120 50" stroke="#ff4d4d" stroke-width="3"
+                            stroke-dasharray="8,4" fill="none" />
+                        <path d="M110 45 L120 50 L115 60 Z" fill="#ff4d4d" />
+                        <text x="20" y="140" font-family="Patrick Hand" font-size="16" fill="#ff4d4d">Check this
+                            out!</text>
+                    </svg>
+                </div>
+
+                <div class="relative mt-8 md:mt-0">
+                    <div
+                        class="card-hand-drawn p-4 md:p-6 relative transform -rotate-2 hover:rotate-0 transition-transform duration-300 paper-texture">
+                        <div class="tack-decoration"></div>
+                        <img src="https://avatars.githubusercontent.com/u/92805294?v=4" alt="Clayza Aubert"
+                            class="w-full aspect-square object-cover wobbly-md">
+
+                        <div
+                            class="absolute top-2 left-2 md:top-4 md:left-4 w-8 h-8 md:w-12 md:h-12 border-l-4 border-t-4 border-[#2d2d2d] transition-all hover:w-12 hover:h-12 md:hover:w-16 md:hover:h-16">
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 md:top-4 md:right-4 w-8 h-8 md:w-12 md:h-12 border-r-4 border-t-4 border-[#2d2d2d] transition-all hover:w-12 hover:h-12 md:hover:w-16 md:hover:h-16">
+                        </div>
+                        <div
+                            class="absolute bottom-2 left-2 md:bottom-4 md:left-4 w-8 h-8 md:w-12 md:h-12 border-l-4 border-b-4 border-[#2d2d2d] transition-all hover:w-12 hover:h-12 md:hover:w-16 md:hover:h-16">
+                        </div>
+                        <div
+                            class="absolute bottom-2 right-2 md:bottom-4 md:right-4 w-8 h-8 md:w-12 md:h-12 border-r-4 border-b-4 border-[#2d2d2d] transition-all hover:w-12 hover:h-12 md:hover:w-16 md:hover:h-16">
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 md:-bottom-6 -right-4 md:-right-6 bg-[#ff4d4d] text-white px-4 py-2 md:px-4 sm:px-6 md:py-3 transform rotate-12 wobbly-sm border-2 md:border-3 border-[#2d2d2d] hard-shadow-lg hover:rotate-0 transition-transform cursor-pointer">
+                            <span class="text-base md:text-xl font-bold">Open to Work!</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="hidden md:block absolute -top-6 md:-top-6 md:p-10 -right-6 md:-right-10 w-24 h-24 md:w-32 md:h-32 border-4 border-dashed border-[#ff4d4d] rounded-full bounce-gentle">
+                    </div>
+
+                    <div
+                        class="hidden lg:block absolute -left-8 top-1/2 sticky-note p-4 transform -rotate-6 wobbly-sm border-2 border-[#2d2d2d] max-w-[160px] hover:rotate-0 transition-transform cursor-pointer">
+                        <p class="text-sm handwritten-alt">Let's build something amazing!</p>
+                        <svg class="w-6 h-6 inline-block ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 11l3 3L22 4" />
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <div class="relative group">
+                    <div
+                        class="card-hand-drawn p-8 bg-[#fff9c4] transform rotate-2 hover:rotate-0 transition-all hover:scale-105 cursor-pointer">
+                        <div class="tack-decoration"></div>
+                        <div class="text-5xl mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                                viewBox="0 0 32 32">
+                                <path fill="currentColor"
+                                    d="M12.75 25.498h5.5v-5.164h-5.5zm2.75 2.668c1.894 0 2.483-1.027 2.667-1.666h-5.334c.184.64.773 1.666 2.667 1.666m0-25.333a7 7 0 0 0-7 7c0 3.86 3.945 4.937 4.223 9.5h1.27c-.008-.026-.023-.05-.028-.08l-2-10.997a.502.502 0 0 1 .94-.313l.553 1.106l.553-1.107a.5.5 0 0 1 .893 0l.553 1.106l.553-1.107a.498.498 0 0 1 .893 0l.554 1.106l.553-1.107a.5.5 0 0 1 .937.313l-2 10.998c-.004.03-.02.053-.028.078h1.355c.278-4.562 4.224-5.64 4.224-9.5c0-3.864-3.134-7-7-7zm1.958 7.833a.5.5 0 0 1-.446-.275l-.554-1.105l-.553 1.106a.503.503 0 0 1-.896.001l-.553-1.105l-.553 1.106a.5.5 0 0 1-.446.276h-.037l1.455 8h1.167l1.454-8h-.038z" />
+                            </svg></div>
+                        <h3 class="text-2xl font-bold mb-2">Fun Fact!</h3>
+                        <p class="text-lg">I debug with console.log() and I'm not ashamed to admit it!</p>
+                        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                            <div
+                                class="w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-t-[15px] border-t-[#fff9c4]">
+                            </div>
+                            <div
+                                class="absolute top-[-17px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[17px] border-l-transparent border-r-[17px] border-r-transparent border-t-[17px] border-t-[#2d2d2d]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="card-hand-drawn p-8 bg-white transform -rotate-2 hover:rotate-0 transition-all hover:scale-105 cursor-pointer">
+                        <div class="tape-decoration"></div>
+                        <div class="text-5xl mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M58.11 20.152a1833 1833 0 0 1 60.482 58.592q-.127.094-.252.19a1843 1843 0 0 1 39.617 41.367l.213-.142c4.3 4.643 8.576 9.3 12.812 13.97l-.195.126a1736 1736 0 0 1 37.986 43.19l.106-.104c27.063 31.912 52.34 64.147 75.237 96.072q3.121 4.353 6.184 8.695l.723 1.026c1.75 2.486 3.48 4.97 5.2 7.45c.463.67.93 1.338 1.392 2.007c1.43 2.076 2.845 4.15 4.254 6.22c.68 1.003 1.37 2.007 2.048 3.008c1.403 2.076 2.786 4.148 4.166 6.22c.54.808 1.09 1.62 1.627 2.43q0-.002 0 0l-.003-.003c-2.97-1.966-5.948-3.96-8.928-5.97c-.582-.394-1.165-.794-1.747-1.188c-2.45-1.66-4.9-3.33-7.353-5.02c-.606-.417-1.213-.84-1.82-1.26q-3.575-2.472-7.16-4.986l-2.05-1.442q-3.771-2.66-7.548-5.362l-1.032-.74q-4.41-3.164-8.828-6.387c-28.878-21.073-57.928-44.03-86.693-68.44l.055-.057a1717 1717 0 0 1-42.99-37.795l-.062.1a1799 1799 0 0 1-13.99-12.832l.08-.117a1816 1816 0 0 1-41.418-39.697l-.096.127a1809 1809 0 0 1-55.501-57.314c14.89 23.17 30.88 46.1 47.81 68.67C24.96 203.542 33.861 300.61 97.142 363.89c57.81 57.81 143.806 70.223 213.735 37.266a734 734 0 0 1-48.74-42.906c-43.354 10.697-91.117-.853-124.934-34.67c-38.908-38.91-48.344-96.285-28.325-144.162a1289 1289 0 0 0 13.793 16.33c-12.57 39.06-3.322 83.547 27.748 114.617c26.16 26.16 61.83 36.84 95.764 32.063c-30.955-31.627-59.076-66.004-83.49-102.184c97.134 103.204 211.78 192 327.656 250.217C432.41 375.526 344.058 261.308 241.47 164.308c35.714 23.993 69.634 51.706 100.897 82.21c4.888-34.028-5.787-69.84-32.027-96.08c-22.12-22.123-51.042-33.183-79.963-33.183a113.1 113.1 0 0 0-34.93 5.523c-5.398-4.646-10.83-9.24-16.287-13.783a132.2 132.2 0 0 1 51.217-10.31c33.743 0 67.487 12.847 93.178 38.54c33.88 33.88 45.414 81.762 34.615 125.182a740 740 0 0 1 42.904 48.555c32.952-69.93 20.536-155.932-37.27-213.74c-36.82-36.82-85.077-55.232-133.333-55.232c-34.703 0-69.406 9.522-99.855 28.565c-23.82-17.92-48.043-34.778-72.506-50.4z" />
+                            </svg></div>
+                        <h3 class="text-2xl font-bold mb-2">My Philosophy</h3>
+                        <p class="text-lg">"Make it work, make it right, make it fast" - in that order!</p>
+                        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                            <div
+                                class="w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-t-[15px] border-t-white">
+                            </div>
+                            <div
+                                class="absolute top-[-17px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[17px] border-l-transparent border-r-[17px] border-r-transparent border-t-[17px] border-t-[#2d2d2d]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="card-hand-drawn p-8 bg-[#e5e0d8] transform rotate-1 hover:rotate-0 transition-all hover:scale-105 cursor-pointer">
+                        <div class="tack-decoration"></div>
+                        <div class="text-5xl mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                                viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2">
+                                    <path
+                                        d="M3 14c.83.642 2.077 1.017 3.5 1c1.423.017 2.67-.358 3.5-1s2.077-1.017 3.5-1c1.423-.017 2.67.358 3.5 1M8 3a2.4 2.4 0 0 0-1 2a2.4 2.4 0 0 0 1 2m4-4a2.4 2.4 0 0 0-1 2a2.4 2.4 0 0 0 1 2" />
+                                    <path d="M3 10h14v5a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6z" />
+                                    <path d="M16.746 16.726a3 3 0 1 0 .252-5.555" />
+                                </g>
+                            </svg></div>
+                        <h3 class="text-2xl font-bold mb-2">Powered By</h3>
+                        <p class="text-lg">Coffee, curiosity, and a whole lot of Stack Overflow!</p>
+                        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                            <div
+                                class="w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-t-[15px] border-t-[#e5e0d8]">
+                            </div>
+                            <div
+                                class="absolute top-[-17px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[17px] border-l-transparent border-r-[17px] border-r-transparent border-t-[17px] border-t-[#2d2d2d]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <svg class="absolute top-6 md:p-10 right-10 w-24 h-24 opacity-20 hidden lg:block float" viewBox="0 0 100 100">
+            <path d="M10 50 Q 30 30, 50 50 T 90 50" stroke="#ff4d4d" stroke-width="3" fill="none"
+                stroke-dasharray="5,5" />
+            <circle cx="50" cy="50" r="5" fill="#ff4d4d" />
+        </svg>
+    </section>
+
+    <section id="about" class="py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl mb-12 md:mb-16 text-center relative">
+                <span class="wavy-underline">About Me</span>
+                <span class="doodle-star absolute -right-4 md:-right-8 -top-4 text-2xl md:text-3xl"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 512 512">
+                        <path
+                            d="M269.614 30.044c-41.094.11-65.414 10.652-81.03 26.75c-16.656 17.17-24.139 42.145-28.03 71.115c-3.893 28.97-4.132 61.396-7.866 92.127s-10.966 60.248-30.557 82.406c-15.817 17.892-42.361 25.805-62.95 35.092c-10.296 4.643-19.02 9.523-23.905 14.351s-6.475 8.28-4.984 15.149c1.096 5.052 1.608 4.95 5.66 5.863c.26.059.576.099.865.147c.557 5.33.8 11.75-.547 15.793c-2.607 7.825-15.762 11.07-15.469 19.314c.375 10.517 11.005 24.543 21.44 23.178c9.19-1.203 13.373-15.322 12.992-24.582c-.206-4.997-6.993-7.761-8.076-12.643c-1.234-5.558.271-14.423 1.748-20.937c2.398-.154 4.955-.365 7.662-.627c17.928-1.738 42.524-4.773 62.908 10.922l.188.144l.18.154c8.02 6.876 11.601 15.838 13.708 23.77c2.107 7.931 3.122 15.205 5.084 20.517c1.963 5.313 4.028 8.479 9.606 11.131c5.527 2.63 15.524 4.371 32.275 2.875c6.943-1.197 23.278-9.063 40.928-16.4c17.776-7.39 37.824-14.455 57.451-11.662c22.195 3.158 36.671 21.628 50.092 35.969c6.71 7.17 13.151 13.532 19.105 17.296c5.955 3.765 10.752 5.103 16.756 3.752c3.784-.85 6.019-2.717 8.604-6.716s4.872-10.023 7.088-16.815c4.43-13.584 8.153-30.887 22.523-41.054c15.43-10.919 35.04-9.373 51.36-9.366c2.497.001 4.914-.024 7.236-.088c1.676 6.563 3.632 16.245 2.43 22.186c-1.07 5.28-8.3 8.397-8.44 13.781c-.322 12.39 5.349 32.649 17.742 32.672c12.318.023 18.463-20.109 17.758-32.406c-.326-5.692-7.844-8.637-9.877-13.963c-2.372-6.216-3.17-17.085-3.437-24.25c3.643-1.11 5.647-2.575 6.986-4.809c1.073-1.79 1.352-3.25.978-5.77c-.373-2.519-1.69-5.98-4.097-9.984c-4.815-8.008-13.776-17.92-24.324-28.353c-21.097-20.867-48.347-43.68-62.825-67.358c-4.863-7.952-8.993-16.588-12.576-25.705a271 271 0 0 0-21.726-.51c-.277 9.449-.298 27.428 3.062 37.31c3.313 9.743 17.026 11.318 17.207 25.634c.193 15.237-6.193 39.866-21.422 40.383c-15.972.541-25.213-24.753-25.283-40.735c-.06-13.684 12.29-14.826 14.397-23.879c1.635-7.029.603-17.906-.751-26.676c-1.116-5.49-5.266-11.503-12.227-10.64c-33.643 3.153-66.13 10.934-98.915 17.518c3.746-21.205 11.727-47.904 35.3-65.721a74 74 0 0 1 4.52-3.154c-.304 5.65-.976 11.957-2.492 16.06c-1.742 4.717-9.088 7.325-8.68 12.336c.611 7.504 8.295 16.512 15.815 16.13c8.506-.434 16.796-11.492 15.943-19.966c-.404-4.016-7.606-4.097-9.29-7.765c-2.548-5.546-1.784-15.554-.835-22.373c21.352-9.2 44.721-6.84 64.479.29c8.004 2.89 13.774 7.568 18.152 13.231c-4.283-18.421-7.608-37.494-11.049-56.047c-4.684 11.104-23.122 12.455-42.303 4.672c15.512-9.746 25.996-23.802 35.4-38.783c-5.935-25.782-13.52-48.61-24.792-64.387c-11.33-15.859-25.448-25.085-48.428-25.775a258 258 0 0 0-8.445-.12zm-41.33 90.005c.635-.009 1.278.256 1.91.832c17.36 15.839 31.196 35.58 54.338 41.11c-10.236 9.53-31.876 14.4-57.028 1.125c-10.858-17.297-5.365-42.982.78-43.067m41.023 318.409c-16.932.1-38.307 8.538-36.385 22.369c3.127 22.496 55.236 28.997 67.424 9.832c6.62-10.41-8.522-27.451-20.367-30.903c-3.094-.901-6.764-1.321-10.672-1.298" />
+                    </svg></span>
+            </h2>
+
+            <div class="grid gap-6 md:gap-10">
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 lg:p-10 relative transform rotate-1 hover:rotate-0 transition-all paper-texture overflow-hidden">
+                    <div class="tape-decoration"></div>
+
+                    <div class="flex items-start gap-3 md:gap-4 mb-4 md:mb-6">
+                        <span class="text-3xl md:text-4xl lg:text-5xl flex-shrink-0"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24">
+                                <path
+                                    d="M1.5 4v1.5c0 4.15 2.21 7.78 5.5 9.8V20h15v-2c0-2.66-5.33-4-8-4h-.25C9 14 5 10 5 5.5V4m9 0a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4a4 4 0 0 0-4-4" />
+                            </svg></span>
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl break-words">Hello World!</h3>
+                    </div>
+
+                    <p class="text-base md:text-lg lg:text-xl leading-relaxed mb-4 break-words">
+                        I'm a <span class="highlight font-bold">programming enthusiast</span> who loves building
+                        creative and functional applications.
+                        I mostly work with <span
+                            class="bg-[#fff9c4] px-2 py-1 rounded inline-block transform -rotate-1">JavaScript</span>,
+                        especially using
+                        <span class="bg-[#fff9c4] px-2 py-1 rounded inline-block transform rotate-1">Node.js</span>, and
+                        I frequently use
+                        <span class="bg-[#fff9c4] px-2 py-1 rounded inline-block transform -rotate-1">MongoDB</span> as
+                        my primary database due to its
+                        flexibility and powerful document-oriented structure.
+                    </p>
+
+                    <div class="border-l-4 border-[#ff4d4d] pl-4 md:pl-6 py-2 my-4 md:my-6 bg-[#ff4d4d]/5">
+                        <p class="text-base md:text-lg lg:text-xl leading-relaxed break-words">
+                            💡 I believe that every project I build is not just about writing code—it's about
+                            creating something <span
+                                class="text-[#ff4d4d] font-bold text-xl md:text-2xl lg:text-3xl">meaningful</span>,
+                            <span class="text-[#ff4d4d] font-bold text-xl md:text-2xl lg:text-3xl">efficient</span>, and
+                            <span class="text-[#ff4d4d] font-bold text-xl md:text-2xl lg:text-3xl">impactful</span>.
+                        </p>
+                    </div>
+
+                    <svg class="absolute bottom-4 right-4 w-16 md:w-20 h-16 md:h-20 opacity-30" viewBox="0 0 100 100">
+                        <path d="M10,50 Q30,30 50,50 T90,50" fill="none" stroke="#ff4d4d" stroke-width="2"
+                            stroke-dasharray="3,3" />
+                        <circle cx="50" cy="50" r="3" fill="#ff4d4d" />
+                    </svg>
+                </div>
+
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 lg:p-10 relative transform -rotate-1 hover:rotate-0 transition-all bg-[#fff9c4] paper-texture overflow-hidden">
+                    <div class="tack-decoration"></div>
+
+                    <h3
+                        class="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 flex items-center gap-2 md:gap-3 break-words flex-wrap">
+                        <span class="text-3xl md:text-4xl"><svg xmlns="http://www.w3.org/2000/svg" width="52"
+                                height="52" viewBox="0 0 48 48">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.077 12.27s-.611-.321-1.008-2.14s3.086-5.18 3.086-5.18s1.07-.519 5.5-.442s5.486.794 6.403 1.894C32.055 11.2 39.563 20.75 41.345 28.28c.406 1.122.966.51.966 2.321c0 1.298-.71 1.656-.9 1.868c-4.614 5.164-15.92 6.875-20.963 6.875s-5.011-1.161-6.417-1.161s-2.964 4.645-6.44 5.317c-2.59-5.195-2.483-15.707 0-21.26c5.844 0 6.776 2.245 9.19 2.245c2.063 0 1.742-1.283 4.997-1.283s7.746 3.712 7.746 3.712c-2.544-3.162.292-10.868-5.202-15.997c-1.032-.962-1.513 2.2-4.722 2.2c-.473.28-2.175.503-2.175.503"
+                                    stroke-width="1" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M30.884 28.224c.894 1.02 2.731 2.403 4.439 2.38m-22.85-1.069c-1.971 2.368-2.231 4.935-4.217 6.005m7.257-4.935c2.965 3.01 8.328 2.81 11.46-.398m.133-21.467c-.137.573-.87 1.455-1.41 1.604M18.73 6.448c-.401.481-2.35 2.957-2.304 3.358s-.24 2.406.367 2.624s2.67-.15 2.647-1.02s-.195-1.318-.149-1.742s1.421-2.52 1.421-2.52"
+                                    stroke-width="1" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.747 6.081c-.504.608-2.166 2.957-2.143 3.942s.126 1.708.355 1.926s1.468-.295 1.468-.295"
+                                    stroke-width="1" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.87 12.452s.496.54.553 1.124s-.756 1.146-1.5 1.352s-1.789-1.192-1.789-1.719s.825-1.26.825-1.26m6.619-2.279c.026.741.207 1.544-.432 1.777s-1.745.176-1.745.176"
+                                    stroke-width="1" />
+                            </svg></span>
+                        <span>What I Enjoy Working On</span>
+                    </h3>
+
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="flex items-start gap-3 md:gap-4 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white border-3 border-[#2d2d2d] rounded-full flex items-center justify-center text-2xl md:text-3xl group-hover:rotate-12 transition-transform hard-shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 512 512">
+                                    <path
+                                        d="M161.9 17.31c-32.7 0-63.75 8.22-88.96 24.19c-28.82 18.25-49.85 47.08-55.85 84.2c-5.99 37 2.83 81.8 31.25 133c19.84 35.6 44.25 63.8 59.66 93.5c12.4 25.7 18.4 46.7 15.6 75.2c-14.7 2.9-25.73 15.7-25.73 31.2c0 17.5 14.23 31.8 31.73 31.8c17.6 0 31.8-14.3 31.8-31.8c0-13.2-8-24.4-19.4-29.3c1-10.2 1-19.8.1-29.1c9.2-10.8 19.9-16.3 33.2-18.1c14.7-2.1 32.7.7 53.3 8.1c5.1 9.7 9.7 20 13.7 31.1c-9.2 5.4-15.3 15.4-15.3 26.8c0 17.1 13.9 31 31 31c17.2 0 31.1-13.9 31.1-31c0-16.3-12.5-29.7-28.5-31c-4-11.6-8.7-22.4-13.9-32.6c10.2-9.9 27.5-16.7 47.6-20.6c22-4.3 46.7-5.4 67.4-6c7 6.4 13.9 13.2 20.6 20.3c-.5 2.2-.8 4.6-.8 7c0 16.4 13.3 29.6 29.6 29.6c16.4 0 29.6-13.2 29.6-29.6c0-16.3-13.2-29.6-29.6-29.6c-6.9 0-13.3 2.4-18.3 6.4c-6.5-6.7-13.1-13-19.8-19.1c-1-49.1 13.3-87.6 37.8-119.2c8.9-2.2 18-5.4 27.4-9.7c5.8 5.7 13.7 9.2 22.4 9.2c17.5 0 31.7-14.2 31.7-31.8c0-17.5-14.2-31.7-31.7-31.7s-31.8 14.2-31.8 31.7c0 2.1.2 4.2.6 6.2c-7.8 3.5-15.2 6.1-22.4 8c-15.5-19.9-16.9-35.5-12.6-52.8c4.6-18.4 17.3-38.6 29.9-61.9c6.3-4.02 12-8.88 16.7-14.62c5.5 4.16 12.3 6.62 19.7 6.62c17.9 0 32.5-14.53 32.5-32.47c0-17.93-14.6-32.46-32.5-32.46s-32.5 14.53-32.5 32.46c0 3.4.6 6.68 1.5 9.75c-11.2 16.83-32.7 26.23-58.8 26.69c-26.6.47-57.1-8.56-82.7-27.25c-40-23.91-86.1-41.78-126.3-42.31m46.8 25c18.6 4.78 37.1 12.46 54.7 23.22l.1 14.75c-17.7-13.23-37.1-27.25-54.3-36.15zm-61.8 3.22l4.6 15.78c-11.2-5.2-22.9-9.35-35.3-12.09c10.7-2.2 20.7-4.03 30.7-3.69m20.2 2.72c9.1 2.07 18.4 5.46 26.2 9.03l9.8 36.94c-9.2-7.27-18.6-14.13-28.5-20.28zm-62.8 17.78c18.5 3.03 35.5 9.68 51.6 18.72l-10.8 18.65c-14-13.33-28.2-26.75-40.8-37.37m111.5 3.34c10.8 6.65 21.4 14.27 31.9 22.28c5.3 4.12 10.6 8.34 15.9 12.55l.3 44.1c-11.7-10.6-23.6-21.9-35.9-32.9zm66.4 8.85c12.6 8.53 26.2 15.08 39.9 19.62l.7 28.26c-13-8.7-26.5-19.6-40.5-30.88zm-192.29.18c15.59 13.03 30.59 27.3 45.39 42.1l-13.9 23.9c-13.6-22.6-24.73-45.32-31.49-66m81.89 16.22c13.7 9.28 26.8 19.98 39.7 31.38c-2 6.1-12.2 21.9-16.1 28.1c-12.2-12.2-24.3-24.7-36.6-37zm224.7 7.88c-8.2 14.6-15.8 28.9-19.9 44.2c-11.2.2-22.8-3.2-34.9-9.3l-.8-34.6c19.1 3.5 38 3.8 55.6-.3m-342.91 8c.3 21.8 3.72 41.3 9.41 58.9L46.75 166c.35-20.5 2.82-39.5 6.84-55.5m32.38 8.7c6.46 13.6 13.77 26.2 21.73 37.7l-13.55 5.8c-4.74-15.3-7.78-30.3-8.18-43.5m196.43.1c14.3 10.9 26.8 21 40.9 29.2l1 45.7c-14.1-7.6-27.9-17.8-41.6-29.4zm-133.5 15c11.9 12.1 23.8 24.5 36 36.6l-16.4 26.4c-12.6-11.1-24.3-23.1-35-36.5zm77.7 5.2c13 11.7 25 23.1 36.4 33.1l-17.1 28.6c-12.7-10.6-24.9-21.9-36.8-33.6zm115.6 18.7c10.3 4.3 20.9 6.9 31.7 7.2c-.2 14.1 3.6 28.7 12.9 43.6c-15.9.6-30-1.3-43.6-6.2zm-223 14.1c9.9 12.5 20.6 23.8 32 34.3l-22.7 8c-10.7-11.8-19.8-22.8-26.5-35zm79.4 12c12 11.6 24.3 22.9 37.3 33.5l-12.4 20.7c-14-9.4-28.9-20-40.5-29.2zm78.9.5c14 11.3 28.5 21.4 44 29l-16.3 28.5c-15.8-8.6-30.6-18.5-44.6-29.3c5.6-9.4 11.3-18.8 16.9-28.2m-228.53.8l22.09 4.6c5.33 11.7 11.66 22.6 18.72 32.9l-27.53-1.9c-6.04-10.7-10.69-22.4-13.28-35.6m118.53 35.1c11.4 9.4 23.3 18.1 35.5 26.4l-24.3 8.2c-12.1-8.3-24.5-17.5-34.8-26.3zm171.3.4c15 5.1 32.5 7.2 46.6 6.6c-7.6 12.1-14.1 25.1-19 39.1c-15.8-4.2-30.6-9.6-44.5-16c5.6-9.9 11.3-19.8 16.9-29.7m-88.1 8.4c14.2 10.7 29.1 20.6 45.1 29.3L285 277.7c-15.5-9.9-30.9-19.4-45.8-29c3.8-6.4 7.7-12.8 11.5-19.2m-127 6.6c10.8 10.6 23 18.1 33 26.6l-6.7 2.2c-9.3-9.5-19.5-20.4-26.3-28.8m-48.2 4.7c9.67.6 19.32 1.5 29 2c7.6 8.9 15.6 17.9 22.5 25.2c-7.3.7-17.4.9-25.6 1.2c-9.27-9.7-18.85-19.4-25.9-28.4m147.1 19.5c15.1 9.7 30.4 19.2 45.7 29l-24 10.8c-15.1-11.3-32.2-22.7-46-31.7zm89.9 6.9c15.1 7 31.2 12.9 48.4 17.5c-3.3 13.4-5.4 27.5-6.1 42.5c-17.7-14.5-35.9-27.3-54.1-39.3c3.9-6.9 7.9-13.8 11.8-20.7m-136.6 8.7c17.1 11.6 34 22.3 48.8 33l-22.9 10.3c-12.1-14-24.8-26.9-37.2-39.5zm-31.2 10.4c11.6 11.7 23.2 23.3 34.4 35.6h-24.8c-10.7-12.6-22.4-23.8-33.9-34.7c8.1-.1 16.2-.9 24.3-.9m-50.86 1.9c11.76 11.3 23.66 22.2 34.76 33.7H112c-7.2-11.3-14.92-22.4-22.66-33.6c1.5 0 3.01-.1 4.5-.1m193.26 13.2c18.2 12 36.2 24.6 53.7 38.6c-19.8 1.3-37.6 3.1-54.7 6.5c-6.1-12.3-15.1-23.1-25.9-33c8.9-4.1 17.9-8.1 26.9-12.1m-45.7 20.5c11.3 9.5 20.3 19.3 26.2 29.7c-11.3 3.8-21.7 9-30.1 16.2c-7.2-12.1-15.1-23.2-23.3-33.7zM123 340.6h22.2c6.3 7.9 12.1 16.2 17 25.2c-8.7 2.6-16.8 6.7-24.1 12.5c-4.1-14-9-26.4-15.1-37.7m45.7 0h26.6c6.8 8.3 13.3 16.9 19.4 26c-11.6-2.8-22.6-4.2-33.1-3.8c-4.1-7.9-8.6-15.9-12.9-22.2" />
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="text-lg md:text-xl lg:text-2xl font-bold mb-2 break-words">Web Scraping</h4>
+                                <p class="text-sm md:text-base lg:text-lg break-words">Collecting relevant data that
+                                    enhances app functionality and provides valuable insights</p>
+                                <div class="mt-2 md:mt-3 flex flex-wrap gap-2">
+                                    <span class="skill-badge text-xs md:text-sm">Puppeteer</span>
+                                    <span class="skill-badge text-xs md:text-sm">Cheerio</span>
+                                    <span class="skill-badge text-xs md:text-sm">undici</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-dashed border-[#2d2d2d] ml-6 md:ml-8 h-6 md:h-8"></div>
+
+                        <div class="flex items-start gap-3 md:gap-4 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white border-3 border-[#2d2d2d] rounded-full flex items-center justify-center text-2xl md:text-3xl group-hover:rotate-12 transition-transform hard-shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 48 48">
+                                    <path
+                                        d="M24 4c.69 0 1.25.56 1.25 1.25V7h7.5A4.25 4.25 0 0 1 37 11.25v8.15a3 3 0 0 0-1.55-.4a3 3 0 0 0-1.75.56A3 3 0 0 0 32.59 21v.07l-.85 2.6a3 3 0 0 1-.122.33H15.25A4.25 4.25 0 0 1 11 19.75v-8.5A4.25 4.25 0 0 1 15.25 7h7.5V5.25c0-.69.56-1.25 1.25-1.25m1.41 24H12.25A4.25 4.25 0 0 0 8 32.25v1.05c0 3.154 1.535 5.888 4.336 7.785C15.1 42.957 19.06 44 24 44s8.9-1.043 11.664-2.915q.764-.518 1.4-1.115H35.65l-.135.003a3 3 0 0 1-1.735-.553a3 3 0 0 1-1.12-1.51l-.84-2.59a3.2 3.2 0 0 0-.54-1A3 3 0 0 0 31 34a3.3 3.3 0 0 0-1.35-.79L27 32.35A3 3 0 0 1 25.41 28M16.5 15.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 0 0-5 0M29 18a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m3.833 15.112a5.36 5.36 0 0 0-2.544-1.805l-2.603-.845a1.028 1.028 0 0 1 0-1.937l2.602-.845a5.36 5.36 0 0 0 3.323-3.33l.022-.064l.845-2.6a1.027 1.027 0 0 1 1.94 0l.845 2.6a5.36 5.36 0 0 0 3.397 3.394l2.602.845l.052.013a1.028 1.028 0 0 1 0 1.937l-2.602.845a5.36 5.36 0 0 0-3.397 3.394l-.846 2.6l-.025.064a1.027 1.027 0 0 1-1.538.433a1.03 1.03 0 0 1-.375-.496l-.846-2.601a5.4 5.4 0 0 0-.852-1.602m14.776 6.872l-1.378-.448a2.84 2.84 0 0 1-1.797-1.796l-.448-1.377a.544.544 0 0 0-1.027 0l-.448 1.377a2.84 2.84 0 0 1-1.77 1.796l-1.378.448a.545.545 0 0 0 0 1.025l1.378.448q.227.075.438.188l.003.015a2.84 2.84 0 0 1 1.357 1.61l.448 1.377a.545.545 0 0 0 1.01.038v-.008l.016-.04l.448-1.377a2.84 2.84 0 0 1 1.798-1.796l1.378-.448a.545.545 0 0 0 0-1.025z" />
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="text-lg md:text-xl lg:text-2xl font-bold mb-2 break-words">Bot Development
+                                </h4>
+                                <p class="text-sm md:text-base lg:text-lg break-words">Automating repetitive tasks and
+                                    applying smart logic to solve real problems</p>
+                                <div class="mt-2 md:mt-3 flex flex-wrap gap-2">
+                                    <span class="skill-badge text-xs md:text-sm">Discord.js</span>
+                                    <span class="skill-badge text-xs md:text-sm">Telegraf</span>
+                                    <span class="skill-badge text-xs md:text-sm">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-dashed border-[#2d2d2d] ml-6 md:ml-8 h-6 md:h-8"></div>
+
+                        <div class="flex items-start gap-3 md:gap-4 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white border-3 border-[#2d2d2d] rounded-full flex items-center justify-center text-2xl md:text-3xl group-hover:rotate-12 transition-transform hard-shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path
+                                            d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor"
+                                            d="M9.107 5.448c.598-1.75 3.016-1.803 3.725-.159l.06.16l.807 2.36a4 4 0 0 0 2.276 2.411l.217.081l2.36.806c1.75.598 1.803 3.016.16 3.725l-.16.06l-2.36.807a4 4 0 0 0-2.412 2.276l-.081.216l-.806 2.361c-.598 1.75-3.016 1.803-3.724.16l-.062-.16l-.806-2.36a4 4 0 0 0-2.276-2.412l-.216-.081l-2.36-.806c-1.751-.598-1.804-3.016-.16-3.724l.16-.062l2.36-.806A4 4 0 0 0 8.22 8.025l.081-.216zM19 2a1 1 0 0 1 .898.56l.048.117l.35 1.026l1.027.35a1 1 0 0 1 .118 1.845l-.118.048l-1.026.35l-.35 1.027a1 1 0 0 1-1.845.117l-.048-.117l-.35-1.026l-1.027-.35a1 1 0 0 1-.118-1.845l.118-.048l1.026-.35l.35-1.027A1 1 0 0 1 19 2" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h4 class="text-lg md:text-xl lg:text-2xl font-bold mb-2 break-words">AI Technologies
+                                </h4>
+                                <p class="text-sm md:text-base lg:text-lg break-words">Exploring machine learning and
+                                    NLP for building intelligent systems</p>
+                                <div class="mt-2 md:mt-3 flex flex-wrap gap-2">
+                                    <span class="skill-badge text-xs md:text-sm">TensorFlow</span>
+                                    <span class="skill-badge text-xs md:text-sm">OpenAI</span>
+                                    <span class="skill-badge text-xs md:text-sm">NLP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 md:py-24 bg-white/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4">
+                    <span class="wavy-underline">Skills & Technologies</span>
+                </h2>
+                <p class="text-lg md:text-xl text-[#2d2d2d]/70 handwritten-alt">The tools I use to bring ideas to life
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 relative transform rotate-1 hover:-rotate-1 transition-all overflow-hidden">
+                    <div class="tape-decoration"></div>
+                    <div class="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
+                        <span class="text-3xl md:text-4xl flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="52" height="52" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                                    <path
+                                        d="m21.255 7.134l-.494-.857c-.373-.648-.56-.972-.877-1.1c-.318-.13-.677-.028-1.395.176l-1.22.343c-.459.106-.94.046-1.359-.169l-.337-.194a2 2 0 0 1-.788-.968l-.334-.997c-.22-.66-.33-.99-.59-1.18C13.598 2 13.25 2 12.556 2h-1.114c-.695 0-1.042 0-1.303.189c-.262.189-.371.519-.591 1.179l-.334.997a2 2 0 0 1-.788.968l-.337.194a2 2 0 0 1-1.359.17l-1.22-.344c-.718-.204-1.077-.306-1.395-.177c-.317.13-.504.453-.877 1.101l-.494.857c-.35.607-.525.91-.49 1.234c.033.323.267.583.736 1.104l1.03 1.153c.253.319.432.875.432 1.375s-.18 1.056-.431 1.375L2.99 14.528c-.469.52-.703.781-.737 1.104s.141.627.491 1.234l.494.857c.373.648.56.972.877 1.1c.318.13.677.028 1.395-.176l1.22-.343c.46-.106.94-.046 1.36.169l.336.194c.359.23.635.57.788.968l.334.997c.22.66.33.99.59 1.18c.262.188.61.188 1.304.188h1.114c.695 0 1.042 0 1.303-.189c.262-.189.372-.518.591-1.178l.334-.998c.153-.399.429-.738.788-.968l.337-.194a2 2 0 0 1 1.359-.17l1.22.344c.718.204 1.077.306 1.395.177c.317-.13.504-.453.877-1.101l.494-.857c.35-.607.525-.91.49-1.234c-.033-.323-.267-.583-.736-1.104l-1.03-1.153c-.253-.32-.432-.875-.432-1.375s.18-1.056.431-1.375l1.031-1.153c.469-.52.703-.781.737-1.104s-.141-.627-.491-1.234Z" />
+                                    <path stroke-linejoin="round"
+                                        d="m14.062 11.5l.5-.5c.441-.441.662-.662.951-.57c.29.091.336.353.427.877q.06.338.06.693a4 4 0 0 1-5.5 3.71m-.5-3.175l-.544.544c-.434.434-.652.652-.938.565c-.287-.087-.338-.344-.44-.857A4 4 0 0 1 13.5 8.291" />
+                                </g>
+                            </svg></span>
+                        <h3 class="text-xl md:text-2xl lg:text-3xl break-words">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 md:gap-3">
+                        <span class="skill-badge text-sm md:text-base">Express.js</span>
+                        <span class="skill-badge text-sm md:text-base">Fastify</span>
+                        <span class="skill-badge text-sm md:text-base">FastAPI</span>
+                        <span class="skill-badge text-sm md:text-base">Flask</span>
+                        <span class="skill-badge text-sm md:text-base">Koa.js</span>
+                        <span class="skill-badge text-sm md:text-base">Nitro</span>
+                        <span class="skill-badge text-sm md:text-base">Elysia</span>
+                        <span class="skill-badge text-sm md:text-base">Hono</span>
+                    </div>
+                </div>
+
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 relative transform -rotate-1 hover:rotate-1 transition-all overflow-hidden">
+                    <div class="tack-decoration"></div>
+                    <div class="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
+                        <span class="text-3xl md:text-4xl flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="52" height="52" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m5 8l6 6m-7 0l6-6l2-3M2 5h12M7 2h1m14 20l-5-10l-5 10m2-4h6" />
+                            </svg></span>
+                        <h3 class="text-xl md:text-2xl lg:text-3xl break-words">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 md:gap-3">
+                        <span class="skill-badge text-sm md:text-base">JavaScript</span>
+                        <span class="skill-badge text-sm md:text-base">TypeScript</span>
+                        <span class="skill-badge text-sm md:text-base">Python</span>
+                        <span class="skill-badge text-sm md:text-base">Kotlin</span>
+                    </div>
+                </div>
+
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 relative transform rotate-1 hover:-rotate-1 transition-all overflow-hidden">
+                    <div class="tack-decoration"></div>
+                    <div class="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
+                        <span class="text-3xl md:text-4xl flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="52" height="52" viewBox="0 0 32 32">
+                                <path fill="currentColor"
+                                    d="M30 24v-2h-2.101a5 5 0 0 0-.732-1.753l1.49-1.49l-1.414-1.414l-1.49 1.49A5 5 0 0 0 24 18.101V16h-2v2.101a5 5 0 0 0-1.753.732l-1.49-1.49l-1.414 1.414l1.49 1.49A5 5 0 0 0 18.101 22H16v2h2.101a5 5 0 0 0 .732 1.753l-1.49 1.49l1.414 1.414l1.49-1.49a5 5 0 0 0 1.753.732V30h2v-2.101a5 5 0 0 0 1.753-.732l1.49 1.49l1.414-1.414l-1.49-1.49A5 5 0 0 0 27.899 24Zm-7 2a3 3 0 1 1 3-3a3.003 3.003 0 0 1-3 3" />
+                                <path fill="currentColor"
+                                    d="M28 4H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h10v-2H4V12h24v3h2V6a2 2 0 0 0-2-2m0 6H4V6h24Z" />
+                                <circle cx="20" cy="8" r="1" fill="currentColor" />
+                                <circle cx="23" cy="8" r="1" fill="currentColor" />
+                                <circle cx="26" cy="8" r="1" fill="currentColor" />
+                            </svg></span>
+                        <h3 class="text-xl md:text-2xl lg:text-3xl break-words">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 md:gap-3">
+                        <span class="skill-badge text-sm md:text-base">Next.js</span>
+                        <span class="skill-badge text-sm md:text-base">React</span>
+                        <span class="skill-badge text-sm md:text-base">Remix</span>
+                        <span class="skill-badge text-sm md:text-base">Nuxt</span>
+                        <span class="skill-badge text-sm md:text-base">Svelte</span>
+                    </div>
+                </div>
+
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 relative transform -rotate-1 hover:rotate-1 transition-all">
+                    <div class="tape-decoration"></div>
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="text-4xl"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                                viewBox="0 0 24 24">
+                                <g fill="none">
+                                    <path fill="currentColor"
+                                        d="M21 7c0 2.21-4.03 4-9 4S3 9.21 3 7s4.03-4 9-4s9 1.79 9 4" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M21 7c0 2.21-4.03 4-9 4S3 9.21 3 7m18 0c0-2.21-4.03-4-9-4S3 4.79 3 7m18 0v5M3 7v5m9 4c-4.97 0-9-1.79-9-4m0 0v5c0 2.21 4.03 4 9 4m6-6v3m0 3v-3m0 0h3m-3 0h-3" />
+                                </g>
+                            </svg></span>
+                        <h3 class="text-2xl md:text-3xl">Database</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">Turso</span>
+                        <span class="skill-badge">Cassandra</span>
+                    </div>
+                </div>
+
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 relative transform rotate-1 hover:-rotate-1 transition-all bg-[#fff9c4]">
+                    <div class="tape-decoration"></div>
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="text-4xl"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                                viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path
+                                        d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                    <path fill="currentColor"
+                                        d="M18 2a2 2 0 0 1 2 2v12.99c0 .168-.038.322-.113.472l-.545 1.09a1 1 0 0 0 0 .895l.544 1.088A1 1 0 0 1 19 22H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zM7 18a1 1 0 1 0 0 2h10.407a3 3 0 0 1 0-2zm9-7c-.362 0-.6.188-.695.278c-.12.114-.19.247-.268.39a1 1 0 0 1-.4.387c-.134.07-.257.142-.363.255a1.01 1.01 0 0 0 0 1.381c.103.111.231.185.364.255c.187.102.32.241.4.386c.076.143.146.277.267.39a1.01 1.01 0 0 0 1.389.002c.121-.115.191-.248.269-.392a1 1 0 0 1 .4-.386c.133-.073.258-.141.364-.255a1.014 1.014 0 0 0 0-1.38a1.4 1.4 0 0 0-.365-.256a1 1 0 0 1-.4-.387a1.4 1.4 0 0 0-.268-.39A1 1 0 0 0 16 11m-5-6a1 1 0 0 0-.946.677l-.13.378c-.3.879-.99 1.57-1.87 1.87l-.377.129a1 1 0 0 0 0 1.892l.378.13c.879.3 1.57.99 1.87 1.87l.129.377a1 1 0 0 0 1.892 0l.13-.378c.3-.879.99-1.57 1.87-1.87l.377-.129a1 1 0 0 0 0-1.892l-.378-.13a3 3 0 0 1-1.87-1.87l-.129-.377A1 1 0 0 0 11 5" />
+                                </g>
+                            </svg></span>
+                        <h3 class="text-2xl md:text-3xl">AI & ML</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge">Machine Learning</span>
+                        <span class="skill-badge">LLM</span>
+                        <span class="skill-badge">VLM</span>
+                    </div>
+                    <div class="absolute top-2 right-2 text-2xl animate-bounce">✨</div>
+                </div>
+
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-8 relative transform -rotate-1 hover:rotate-1 transition-all">
+                    <div class="tack-decoration"></div>
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="text-4xl"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                                viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="m19 23.3l-.6-.5c-2-1.9-3.4-3.1-3.4-4.6c0-1.2 1-2.2 2.2-2.2c.7 0 1.4.3 1.8.8c.4-.5 1.1-.8 1.8-.8c1.2 0 2.2.9 2.2 2.2c0 1.5-1.4 2.7-3.4 4.6zM6 22a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v9.08L19 13a6.005 6.005 0 0 0-5.2 9z" />
+                            </svg></span>
+                        <h3 class="text-2xl md:text-3xl">Specialized</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge">Bot Dev</span>
+                        <span class="skill-badge">Web Scraping</span>
+                        <span class="skill-badge">Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl lg:text-6xl mb-4">
+                    <span class="wavy-underline">What I Can Build For You</span>
+                </h2>
+                <p class="text-xl text-[#2d2d2d]/70 handwritten-alt">Real solutions for real problems</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="relative group">
+                    <div
+                        class="card-hand-drawn p-8 bg-white hover:bg-[#fff9c4] transition-colors transform rotate-1 hover:rotate-0">
+                        <div class="tape-decoration"></div>
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="text-5xl group-hover:scale-110 transition-transform"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 48 48">
+                                    <path fill="currentColor"
+                                        d="M16.5 24c0 1.9.085 3.742.243 5.5h14.514c.158-1.758.243-3.6.243-5.5s-.085-3.742-.244-5.5H16.745c-.16 1.758-.245 3.6-.245 5.5m-2.767-5.5A64 64 0 0 0 13.5 24c0 1.886.08 3.727.232 5.5H2.177C1.735 27.74 1.5 25.897 1.5 24s.235-3.74.677-5.5zm3.366-3H30.9c-.444-3.027-1.116-5.726-1.949-7.943c-.779-2.073-1.669-3.648-2.58-4.676C25.458 1.849 24.652 1.5 24 1.5s-1.458.35-2.372 1.38c-.911 1.03-1.801 2.604-2.58 4.677c-.833 2.217-1.505 4.916-1.95 7.943m17.169 3c.153 1.773.233 3.614.233 5.5s-.08 3.727-.232 5.5h11.555c.442-1.76.677-3.603.677-5.5s-.235-3.74-.677-5.5zm10.573-3H33.931c-.47-3.388-1.214-6.45-2.171-8.998c-.611-1.626-1.323-3.082-2.134-4.293c6.92 1.782 12.55 6.773 15.212 13.291m-30.77 0H3.161C5.822 8.982 11.453 3.991 18.373 2.21c-.81 1.21-1.523 2.666-2.134 4.292c-.957 2.548-1.7 5.61-2.17 8.998m-.003 17H3.161c2.66 6.515 8.286 11.504 15.2 13.288c-.81-1.21-1.52-2.666-2.13-4.29c-.955-2.55-1.697-5.61-2.165-8.998m14.894 7.944c.83-2.217 1.5-4.916 1.944-7.944H17.096c.443 3.028 1.113 5.727 1.944 7.944c.778 2.073 1.667 3.647 2.58 4.675c.912 1.03 1.72 1.381 2.38 1.381s1.468-.351 2.38-1.381c.913-1.028 1.802-2.602 2.58-4.675m2.809 1.053c.955-2.548 1.697-5.61 2.165-8.997h10.905c-2.66 6.515-8.286 11.504-15.2 13.288c.81-1.21 1.52-2.666 2.13-4.29" />
+                                </svg></div>
+                            <h3 class="text-3xl font-bold">Web Applications</h3>
+                        </div>
+                        <p class="text-lg mb-4">Modern, responsive web apps using Next.js, React, and Node.js. From
+                            landing pages to complex dashboards.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Full
+                                Stack</span>
+                            <span
+                                class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Responsive</span>
+                            <span class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">SEO
+                                Optimized</span>
+                        </div>
+                        <svg class="absolute bottom-4 right-4 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-20 group-hover:opacity-40 transition-opacity"
+                            viewBox="0 0 100 100">
+                            <path d="M20 80 L80 20 M65 20 L80 20 L80 35" stroke="#ff4d4d" stroke-width="4" fill="none"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="card-hand-drawn p-8 bg-white hover:bg-[#fff9c4] transition-colors transform -rotate-1 hover:rotate-0">
+                        <div class="tack-decoration"></div>
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="text-5xl group-hover:scale-110 transition-transform"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 20 20">
+                                    <path fill="currentColor"
+                                        d="M3.135 6.89c.933-.725 1.707-.225 2.74.971c.116.135.272-.023.361-.1S7.687 6.456 7.754 6.4c.066-.059.146-.169.041-.292a36 36 0 0 1-.743-.951c-1.808-2.365 4.946-3.969 3.909-3.994c-.528-.014-2.646-.039-2.963-.004c-1.283.135-2.894 1.334-3.705 1.893c-1.061.726-1.457 1.152-1.522 1.211c-.3.262-.048.867-.592 1.344c-.575.503-.934.122-1.267.414c-.165.146-.627.492-.759.607c-.133.117-.157.314-.021.471c0 0 1.264 1.396 1.37 1.52c.105.122.391.228.567.071c.177-.156.632-.553.708-.623c.078-.066-.05-.861.358-1.177m5.708.517c-.12-.139-.269-.143-.397-.029L7.012 8.63a.29.29 0 0 0-.027.4l8.294 9.439c.194.223.53.246.751.053l.97-.813a.54.54 0 0 0 .052-.758zM19.902 3.39c-.074-.494-.33-.391-.463-.182c-.133.211-.721 1.102-.963 1.506c-.24.4-.832 1.191-1.934.41c-1.148-.811-.749-1.377-.549-1.758c.201-.383.818-1.457.907-1.59c.089-.135-.015-.527-.371-.363c-.357.164-2.523 1.025-2.823 2.26c-.307 1.256.257 2.379-.85 3.494l-1.343 1.4l1.349 1.566l1.654-1.57c.394-.396 1.236-.781 1.998-.607c1.633.369 2.524-.244 3.061-1.258c.482-.906.402-2.814.327-3.308M2.739 17.053a.54.54 0 0 0 0 .758l.951.93c.208.209.538.121.746-.088l4.907-4.824l-1.503-1.714z" />
+                                </svg></div>
+                            <h3 class="text-3xl font-bold">Automation Tools</h3>
+                        </div>
+                        <p class="text-lg mb-4">Custom bots and automation scripts to save time and eliminate repetitive
+                            tasks. Discord, Telegram, and more.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Time
+                                Saver</span>
+                            <span class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Smart
+                                Logic</span>
+                            <span
+                                class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Reliable</span>
+                        </div>
+                        <svg class="absolute bottom-4 right-4 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-20 group-hover:opacity-40 transition-opacity"
+                            viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="30" stroke="#2d5da1" stroke-width="4" fill="none"
+                                stroke-dasharray="5,5" />
+                            <circle cx="50" cy="50" r="5" fill="#2d5da1" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="card-hand-drawn p-8 bg-white hover:bg-[#fff9c4] transition-colors transform rotate-1 hover:rotate-0">
+                        <div class="tape-decoration"></div>
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="text-5xl group-hover:scale-110 transition-transform"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 512 512">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M277.333 102.4V64h44.747v46.387a151.5 151.5 0 0 1 21.476 12.941l6.572-3.994l31.81-19.18l18.356 33.235l29.35 53.222L448 219.866l-31.774 19.2l-6.571 3.936c.367 4.358.551 8.678.551 12.998s-.184 8.64-.551 12.998l6.571 3.936l31.774 19.2l-18.356 33.255l-29.35 53.222l-18.356 33.235l-31.81-19.18l-6.572-3.994a151.5 151.5 0 0 1-21.476 12.941V448h-44.747v-38.4h8.039v-34.752c20.981-5.645 39.703-17.107 54.425-32.794l28.689 17.357l29.388-53.222l-28.745-17.357c2.753-10.464 4.369-21.446 4.369-32.832s-1.616-22.368-4.369-32.832l28.745-17.357l-29.388-53.222l-28.689 17.357c-14.722-15.687-33.444-27.149-54.425-32.794V102.4zm52.1 153.6c0 34.661-21.947 63.957-52.1 73.512v-42.248c9.317-6.964 15.389-18.371 15.389-31.264s-6.072-24.3-15.389-31.264v-42.248c30.153 9.555 52.1 38.851 52.1 73.512m-244.1-106.665c0-43.516 65.146-79.425 149.334-84.673v42.763c-31.201 2.233-59.391 9.295-80.265 19.732c-18.841 9.42-26.402 18.359-26.402 22.178s7.561 12.757 26.402 22.177c20.874 10.437 49.064 17.5 80.265 19.732v42.764c-42.323-2.639-79.834-13.026-106.674-28.233l-.007 50.226H128c0 3.819 7.561 12.758 26.402 22.178c20.874 10.437 49.064 17.499 80.265 19.732v42.763c-42.331-2.639-79.847-13.029-106.688-28.241l-.007 48.701l.03 1.595c1.054 14.627 45.2 37.389 106.665 41.837v42.775c-82.162-5.123-146.187-39.447-149.221-81.545l-.113-3.128z"
+                                        clip-rule="evenodd" />
+                                </svg></div>
+                            <h3 class="text-3xl font-bold">Data Solutions</h3>
+                        </div>
+                        <p class="text-lg mb-4">Web scraping, data processing, and API integrations. Turn data into
+                            actionable insights.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Web
+                                Scraping</span>
+                            <span class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">APIs</span>
+                            <span
+                                class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Analytics</span>
+                        </div>
+                        <svg class="absolute bottom-4 right-4 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-20 group-hover:opacity-40 transition-opacity"
+                            viewBox="0 0 100 100">
+                            <path d="M20 80 L35 60 L50 70 L65 40 L80 50" stroke="#ff4d4d" stroke-width="4" fill="none"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="card-hand-drawn p-8 bg-gradient-to-br from-[#ff4d4d]/10 to-[#2d5da1]/10 border-[#ff4d4d] hover:bg-[#fff9c4] transition-colors transform -rotate-1 hover:rotate-0">
+                        <div class="tack-decoration"></div>
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="text-5xl group-hover:scale-110 transition-transform"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M24 14.3a11.5 11.5 0 0 0-1.26-2a3.16 3.16 0 0 0-1.422-1a1.43 1.43 0 0 0-.83.05c-.39.12-.86.35-1.28.5s-.611-.06-.771-.27c-.32-.441-.57-1.001-.85-1.371a4.1 4.1 0 0 0-1.592-1.311a1.48 1.48 0 0 0-1.26.12a1.53 1.53 0 0 0-.73.88a2.16 2.16 0 0 0 .08 1.481c.165.373.373.726.62 1.05a22 22 0 0 1 1.48 1.922c.13.21.27.42.39.64a5.6 5.6 0 0 0-1.2-.43a1.5 1.5 0 0 0-.82.08a1.09 1.09 0 0 0-.65.87c-.02.605.144 1.202.47 1.712c.302.445.707.812 1.18 1.07c.94.52 2.061.55 3.172 1a.32.32 0 1 0 .27-.57c-.91-.46-1.851-.59-2.671-1a2.66 2.66 0 0 1-1.211-1.07a2 2 0 0 1-.23-.621a2.4 2.4 0 0 1 0-.36c0-.06 0-.13.06-.15a1 1 0 0 1 .69.15c.34.15.7.34 1 .46c.234.089.481.136.731.14a.59.59 0 0 0 .59-.56q0-.34-.07-.67a2.8 2.8 0 0 0-.24-.631c-.13-.25-.28-.49-.41-.73a22 22 0 0 0-1.55-2.002a4 4 0 0 1-.481-.8a1 1 0 0 1-.08-.53a.38.38 0 0 1 .18-.29c.18-.11.37 0 .54.13q.44.34.78.78c.29.36.571.9.901 1.33c.174.23.383.43.62.591a1.18 1.18 0 0 0 1.001.09q.676-.243 1.32-.56c.231-.1.421-.23.561-.19c.413.119.784.351 1.07.67c.474.55.89 1.147 1.242 1.781a.37.37 0 0 0 .63-.37zM6.13 8.257a.31.31 0 0 0 .1-.44a.33.33 0 0 0-.45-.1l-1.061.7c-.23.17-.65.37-1 .61q-.278.227-.461.531a.8.8 0 0 0 0 .68c.152.3.359.568.61.791q.323.253.69.43c.49.24 1.001.39 1.512.61a.37.37 0 0 0 .37-.63c-.37-.27-.78-.5-1.16-.76a3 3 0 0 1-.581-.53a1.4 1.4 0 0 1-.17-.13l.84-.901zm2.741-1.641c-.33.64-.7 1.251-1 1.901q-.2.416-.35.851c-.11.28-.2.58-.29.87c-.2.7-.341 1.411-.481 2.112a.37.37 0 0 0 .7.22c.28-.67.61-1.31.9-2.001c.191-.44.381-.89.531-1.351c.26-.79.41-1.581.61-2.381a.34.34 0 0 0-.19-.42a.33.33 0 0 0-.43.2m2.372 3.461l-.49.57l-.871.871a.37.37 0 0 0-.1.51a.36.36 0 0 0 .5.11l1.13-.75l.661-.5q.335-.3.6-.66c.163-.208.273-.452.32-.71a.65.65 0 0 0-.21-.501a3.2 3.2 0 0 0-.53-.41a10 10 0 0 0-1-.53a10 10 0 0 0-1.001-.401a.33.33 0 0 0-.43.16a.33.33 0 0 0 .16.43q.42.264.8.58q.377.314.71.671c.13.06.31-.08-.25.56m1.682-7.584c.3.06.75-.81.75-.83a.6.6 0 0 0 .07-.26q.015-.142 0-.28c-.11-1.101-.4-1.001-.5-1.061s-.33 0-.64.91a.8.8 0 0 0-.08.24a1 1 0 0 0 0 .26s.11.97.4 1.02m4.412 1.452q.15-.094.27-.22q.123-.12.22-.26c.73-.931.67-1.001.54-1.211s-.37-.24-1.32.35a3 3 0 0 0-.3.22a3 3 0 0 0-.24.28c-.68 1-.48 1.181-.4 1.261s.23.26 1.23-.42m.2 2.541c.06.38 1.441.36 1.471.36q.3-.027.59-.11c1.201-.3 1.251-.39 1.251-.62s-.19-.49-1.36-.55a2 2 0 0 0-.42 0q-.204.03-.401.09c-1.21.48-1.15.7-1.13.83"
+                                        clip-rule="evenodd" />
+                                    <path fill="currentColor"
+                                        d="M4.739 18.313a.32.32 0 0 0-.31.33c0 1.551 0 1.671.43 2.001c.29.237.634.402 1 .48a2.53 2.53 0 0 0 1.531 2.442c.429.201.89.327 1.361.37c.463.043.93.009 1.38-.1a2.87 2.87 0 0 0 2.352-2.17a.37.37 0 1 0-.71-.181a2.07 2.07 0 0 1-1.851 1.21a4.6 4.6 0 0 1-1 0a4 4 0 0 1-1.001-.23a1.84 1.84 0 0 1-1.281-1.2l.28.06c1.046.193 2.11.26 3.172.2a7 7 0 0 0 2.131-.5l.82-.5q.15-.116.27-.26q.135-.151.24-.32a1.32 1.32 0 0 0 0-1.692a1.6 1.6 0 0 0-.47-.35a7.3 7.3 0 0 0-2.35-.27l-2.302.19c-.86.1-1.721.26-2.592.37zm.59 1l.22-.42l3.002-.15h2.261a6 6 0 0 1 1.551.15a.65.65 0 0 1 .3.15a1 1 0 0 1-.11.22l-.22.26l-.55.331c-.714.32-1.48.506-2.261.55a14 14 0 0 1-2.532-.01a3.23 3.23 0 0 1-1.59-.37c-.161-.13-.201-.35-.07-.69zm7.984-2.191c.18-1 .06-1-.11-1.1s-.4.09-1 .95a1 1 0 0 1-.07.13c0 .32 1 .65 1.15.32zm2.242-10.646a4.94 4.94 0 0 0-1.23-2a7.6 7.6 0 0 0-1.842-1.342a8.8 8.8 0 0 0-7.064-.39A8.37 8.37 0 0 0 .266 7.707a5.9 5.9 0 0 0 0 3.502a8.5 8.5 0 0 0 1.641 3.002c.45.53 1 1 1.461 1.48q.295.295.54.631c.267.353.492.736.67 1.14c0 .08.06.17.1.26c.08.361.731.23.741-.05s-.11-.33-.18-.49a7 7 0 0 0-.69-1.31a7 7 0 0 0-.56-.77c-.43-.511-.931-1.001-1.341-1.512a7.4 7.4 0 0 1-1.301-2.671c-.241-.925-.2-1.9.12-2.802a7.25 7.25 0 0 1 4.402-4.232a8 8 0 0 1 6.204.13c.61.297 1.176.677 1.681 1.13c.488.43.868.968 1.11 1.571a.37.37 0 0 0 .588.16a.36.36 0 0 0 .103-.4" />
+                                </svg></div>
+                            <h3 class="text-3xl font-bold text-[#ff4d4d]">Your Idea!</h3>
+                        </div>
+                        <p class="text-lg mb-4">Got something unique in mind? Let's discuss it! I love turning creative
+                            ideas into reality.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Custom</span>
+                            <span
+                                class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Creative</span>
+                            <span
+                                class="text-sm px-3 py-1 bg-white border-2 border-[#2d2d2d] rounded-full">Innovative</span>
+                        </div>
+                        <svg class="absolute bottom-4 right-4 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-20 group-hover:opacity-40 transition-opacity"
+                            viewBox="0 0 100 100">
+                            <path d="M50 20 L50 80 M20 50 L80 50" stroke="#ff4d4d" stroke-width="4"
+                                stroke-linecap="round" />
+                            <circle cx="50" cy="50" r="35" stroke="#ff4d4d" stroke-width="3" fill="none"
+                                stroke-dasharray="10,5" />
+                        </svg>
                     </div>
                 </div>
             </div>
 
-            <!-- Description -->
-            <p class="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Programming Enthusiast & Creative Developer
-            </p>
-            <p class="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
-                Building creative and functional applications with JavaScript, Node.js, and modern technologies
-            </p>
+            <div class="text-center mt-16">
+                <div
+                    class="inline-block card-hand-drawn p-8 bg-white paper-texture transform -rotate-2 hover:rotate-0 transition-all">
+                    <div class="tape-decoration"></div>
+                    <p class="text-2xl md:text-3xl mb-4 handwritten-alt">
+                        Ready to start your project?
+                    </p>
+                    <a href="#contact"
+                        class="btn-hand-drawn bg-[#ff4d4d] text-white px-8 py-4 text-xl inline-flex items-center gap-2 border-[#2d2d2d]">
+                        <span>Let's Talk!</span>
+                        <span class="text-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.96 9.96 0 0 1-4.644-1.142l-4.29 1.117a.85.85 0 0 1-1.037-1.036l1.116-4.289A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2m1.252 11H8.75l-.102.007a.75.75 0 0 0 0 1.486l.102.007h4.502l.101-.007a.75.75 0 0 0 0-1.486zm1.998-3.5h-6.5l-.102.007a.75.75 0 0 0 0 1.486L8.75 11h6.5l.102-.007a.75.75 0 0 0 0-1.486z" />
+                            </svg></span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-            <!-- Buttons -->
-            <div class="flex flex-col sm:flex-row gap-6 justify-center sm:justify-start">
+        <svg class="absolute top-6 md:p-10 left-10 w-32 h-32 opacity-10 hidden lg:block" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#2d5da1" stroke-width="2" stroke-dasharray="5,5" />
+        </svg>
+        <svg class="absolute bottom-10 right-10 w-40 h-40 opacity-10 hidden lg:block wiggle" viewBox="0 0 100 100">
+            <path d="M20 50 Q 35 30, 50 50 T 80 50" stroke="#ff4d4d" stroke-width="3" fill="none" />
+        </svg>
+    </section>
+
+    <section class="py-12 md:py-20 bg-[#2d2d2d] text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 bg-[#1a1a1a] border-[#ff4d4d] relative font-mono text-sm overflow-hidden">
+                    <div class="tack-decoration"></div>
+                    <div class="flex gap-2 mb-4 pb-3 border-b-2 border-dashed border-[#333]">
+                        <div class="w-3 h-3 rounded-full bg-[#ff4d4d]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#faa61a]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#43b581]"></div>
+                        <span class="ml-2 text-[#666] text-xs">clayza.js</span>
+                    </div>
+
+                    <pre class="text-xs md:text-sm leading-relaxed"><span style="color: #ff4d4d;">const</span> <span style="color: #faa61a;">developer</span> <span style="color: #999;">=</span> {
+  <span style="color: #43b581;">name</span>: <span style="color: #fff9c4;">'Clayza Aubert'</span>,
+  <span style="color: #43b581;">skills</span>: [<span style="color: #fff9c4;">'Python'</span>, <span style="color: #fff9c4;">'Node.js'</span>],
+  <span style="color: #43b581;">passion</span>: <span style="color: #fff9c4;">'Building amazing things'</span>,
+  <span style="color: #43b581;">drinkOfChoice</span>: <span style="color: #fff9c4;">'Coffee ☕'</span>,
+  
+  <span style="color: #faa61a;">code</span><span style="color: #999;">:</span> <span style="color: #ff4d4d;">function</span>() {
+    <span style="color: #999;">console</span>.<span style="color: #43b581;">log</span>(<span style="color: #fff9c4;">'Hello World! 👋'</span>);
+    <span style="color: #ff4d4d;">return</span> <span style="color: #fff9c4;">'Let\'s build something!'</span>;
+  }
+};</pre>
+
+                    <div class="inline-block w-2 h-4 bg-[#fff9c4] animate-pulse ml-1"></div>
+                </div>
+
+                <div class="text-white">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl mb-6 font-bold" style="font-family: 'Kalam', cursive;">
+                        Clean Code,<br>
+                        <span class="text-[#ff4d4d]">Beautiful Results</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl leading-relaxed mb-6" style="font-family: 'Patrick Hand', cursive;">
+                        I write code that's not just functional, but also maintainable, scalable, and enjoyable to work
+                        with.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-4 py-2 bg-[#ff4d4d] text-white rounded-full border-2 border-white font-bold">
+                            Clean Architecture
+                        </div>
+                        <div class="px-4 py-2 bg-[#2d5da1] text-white rounded-full border-2 border-white font-bold">
+                            Performance First
+                        </div>
+                        <div class="px-4 py-2 bg-[#43b581] text-white rounded-full border-2 border-white font-bold">
+                            Well Documented
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 opacity-5 pointer-events-none"
+            style="font-family: monospace; font-size: 10px; line-height: 1.5; overflow: hidden;">
+            01010011 01101111 01101101 01100101 01110100 01101000 01101001 01101110 01100111 00100000 01100001 01101101
+            01100001 01111010 01101001 01101110 01100111
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl lg:text-6xl mb-4">
+                    <span class="wavy-underline">Featured Projects</span>
+                </h2>
+                <p class="text-xl text-[#2d2d2d]/70 handwritten-alt">Some of my recent work from GitHub</p>
+            </div>
+
+            <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="card-hand-drawn overflow-hidden p-6 space-y-4">
+                    <div class="skeleton h-6 wobbly-sm"></div>
+                    <div class="skeleton h-4 wobbly-sm"></div>
+                    <div class="skeleton h-4 w-2/3 wobbly-sm"></div>
+                </div>
+                <div class="card-hand-drawn overflow-hidden p-6 space-y-4">
+                    <div class="skeleton h-6 wobbly-sm"></div>
+                    <div class="skeleton h-4 wobbly-sm"></div>
+                    <div class="skeleton h-4 w-2/3 wobbly-sm"></div>
+                </div>
+                <div class="card-hand-drawn overflow-hidden p-6 space-y-4">
+                    <div class="skeleton h-6 wobbly-sm"></div>
+                    <div class="skeleton h-4 wobbly-sm"></div>
+                    <div class="skeleton h-4 w-2/3 wobbly-sm"></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
                 <a href="https://github.com/ClayzaAubert" target="_blank"
-                    class="border border-gray-600 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-900 transition-colors flex items-center gap-2">
-                    <i class="fab fa-github"></i>
-                    GitHub
+                    class="btn-hand-drawn bg-white px-10 py-4 text-2xl inline-flex items-center gap-3 group">
+                    <span>View All on GitHub</span>
+                    <span class="text-3xl group-hover:translate-x-2 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-[#fff9c4]/50 border-y-3 border-dashed border-[#2d2d2d]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="card-hand-drawn overflow-hidden p-6 md:p-10 md:p-16 text-center relative bg-white paper-texture transform hover:rotate-0 transition-all"
+                style="transform: rotate(-1deg);">
+                <div class="tape-decoration"></div>
+                <span class="quote-mark">"</span>
+                <p class="text-3xl md:text-4xl leading-relaxed mb-6 handwritten-alt">
+                    Code is like humor. When you have to explain it, it's bad.
+                </p>
+                <p class="text-xl text-[#2d2d2d]/60">— Cory House</p>
+
+                <svg class="absolute top-4 left-4 w-12 h-12 opacity-30" viewBox="0 0 50 50">
+                    <circle cx="25" cy="25" r="20" fill="none" stroke="#ff4d4d" stroke-width="2" />
+                    <path d="M25 15 L25 35 M15 25 L35 25" stroke="#ff4d4d" stroke-width="2" />
+                </svg>
+                <svg class="absolute bottom-4 right-4 w-12 h-12 opacity-30" viewBox="0 0 50 50">
+                    <path d="M10 40 L25 10 L40 40 Z" fill="none" stroke="#2d5da1" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl lg:text-6xl mb-6">
+                    <span class="wavy-underline">Let's Connect!</span>
+                </h2>
+                <p class="text-2xl md:text-3xl text-[#2d2d2d]/80 handwritten-alt leading-relaxed">
+                    Interested in collaborating or have a project in mind?<br />
+                    Let's build something <span class="text-[#ff4d4d] font-bold">amazing</span> together!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <a href="https://github.com/ClayzaAubert" target="_blank"
+                    class="card-hand-drawn overflow-hidden p-6 md:p-10 text-center hover:bg-[#fff9c4] transition-all transform rotate-2 hover:rotate-0 hover:scale-105 group">
+                    <div class="mb-4 flex items-center justify-center group-hover:scale-125 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
+                            <path fill="currentColor"
+                                d="M12.001 2c-5.525 0-10 4.475-10 10a9.99 9.99 0 0 0 6.837 9.488c.5.087.688-.213.688-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.337 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.687c-.1-.25-.45-1.275.1-2.65c0 0 .837-.263 2.75 1.024a9.3 9.3 0 0 1 2.5-.337c.85 0 1.7.112 2.5.337c1.913-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.02 10.02 0 0 0 22 12c0-5.525-4.475-10-10-10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl mb-3 font-bold">GitHub</h3>
+                    <p class="text-xl">Check out my repositories</p>
+                    <div class="mt-4 inline-block px-4 py-2 bg-[#2d2d2d] text-white rounded-full text-sm">
+                        @ClayzaAubert
+                    </div>
+                </a>
+
+                <a href="mailto:clayza.aubert@maelyn.my.id"
+                    class="card-hand-drawn overflow-hidden p-6 md:p-10 text-center hover:bg-[#fff9c4] transition-all transform -rotate-2 hover:rotate-0 hover:scale-105 group">
+                    <div class="mb-4 flex items-center justify-center group-hover:scale-125 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"
+                            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
+                            <path fill="currentColor" d="M32.33 6a2 2 0 0 0-.41 0h-28a2 2 0 0 0-.53.08l14.45 14.39Z"
+                                class="clr-i-solid clr-i-solid-path-1" />
+                            <path fill="currentColor"
+                                d="m33.81 7.39l-14.56 14.5a2 2 0 0 1-2.82 0L2 7.5a2 2 0 0 0-.07.5v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-.12-.61M5.3 28H3.91v-1.43l7.27-7.21l1.41 1.41Zm26.61 0h-1.4l-7.29-7.23l1.41-1.41l7.27 7.21Z"
+                                class="clr-i-solid clr-i-solid-path-2" />
+                            <path fill="none" d="M0 0h36v36H0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl mb-3 font-bold">Email</h3>
+                    <p class="text-xl">Get in touch directly</p>
+                    <div class="mt-4 text-sm text-[#2d5da1] break-all">clayza.aubert@maelyn.my.id</div>
                 </a>
 
                 <a href="https://discord.com/users/869009902599815219" target="_blank"
-                    class="border border-indigo-500 px-8 py-3 rounded-lg font-semibold text-indigo-400 hover:border-indigo-400 hover:bg-indigo-900 transition-colors flex items-center gap-2">
-                    <i class="fab fa-discord"></i>
-                    Discord
+                    class="card-hand-drawn overflow-hidden p-6 md:p-10 text-center hover:bg-[#fff9c4] transition-all transform rotate-2 hover:rotate-0 hover:scale-105 group">
+                    <div class="mb-4 flex items-center justify-center group-hover:scale-125 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
+                            <path fill="currentColor"
+                                d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.1.1 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.1 16.1 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02M8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12m6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl mb-3 font-bold">Discord</h3>
+                    <p class="text-xl">Chat with me anytime</p>
+                    <div id="discord-status-footer" class="mt-4 inline-flex items-center gap-2">
+                        <span class="status-indicator status-offline"></span>
+                        <span class="text-sm">Loading status...</span>
+                    </div>
                 </a>
+
+                <a href="https://trakteer.id/clayza" target="_blank"
+                    class="card-hand-drawn overflow-hidden p-6 md:p-10 text-center hover:bg-gradient-to-br hover:from-[#ff4d4d]/20 hover:to-[#ff4d4d]/10 transition-all transform -rotate-2 hover:rotate-0 hover:scale-105 group border-[#ff4d4d]">
+                    <div class="mb-4 flex items-center justify-center group-hover:scale-125 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
+                            <g fill="currentColor">
+                                <path d="M208 88v48a88 88 0 0 1-51.3 80H83.3A88 88 0 0 1 32 136V88Z" opacity="0.2" />
+                                <path
+                                    d="M80 56V24a8 8 0 0 1 16 0v32a8 8 0 0 1-16 0m40 8a8 8 0 0 0 8-8V24a8 8 0 0 0-16 0v32a8 8 0 0 0 8 8m32 0a8 8 0 0 0 8-8V24a8 8 0 0 0-16 0v32a8 8 0 0 0 8 8m96 56v8a40 40 0 0 1-37.51 39.91a96.6 96.6 0 0 1-27 40.09H208a8 8 0 0 1 0 16H32a8 8 0 0 1 0-16h24.54A96.3 96.3 0 0 1 24 136V88a8 8 0 0 1 8-8h176a40 40 0 0 1 40 40m-48-24H40v40a80.27 80.27 0 0 0 45.12 72h69.76A80.27 80.27 0 0 0 200 136Zm32 24a24 24 0 0 0-16-22.62V136a96 96 0 0 1-1.2 15a24 24 0 0 0 17.2-23Z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl mb-3 font-bold text-[#ff4d4d]">Support Me</h3>
+                    <p class="text-xl">Buy me a coffee on Trakteer!</p>
+                    <div
+                        class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-[#ff4d4d] text-white rounded-full font-bold">
+                        <span>❤️</span>
+                        <span>Trakteer</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-8">
+                <div
+                    class="card-hand-drawn overflow-hidden p-6 md:p-10 text-center bg-gradient-to-br from-[#2d5da1]/10 to-[#ff4d4d]/10 border-3 border-[#2d5da1] transform hover:rotate-0 transition-all hover:scale-105 max-w-2xl mx-auto">
+                    <div class="mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M11.847 6.54c2.292 0 3.725-2.482 2.579-4.468a2.98 2.98 0 0 0-2.58-1.49c-2.292 0-3.725 2.483-2.579 4.468a2.98 2.98 0 0 0 2.58 1.49m-.993 10.424H3.809l-2.65 4.164a1.49 1.49 0 0 0 2.24 1.917a2.73 2.73 0 0 1 .188-2.583l1.42-2.148a.62.62 0 0 1 1.032.683l-1.405 2.131a1.49 1.49 0 0 0 2.512 1.599l3.036-4.77h4.147a1.49 1.49 0 0 0 1.489-1.49v-4.964c0-3.057-3.308-4.968-5.956-3.44a4 4 0 0 0-1.348 1.28l.005.018l.72 2.639h1.615c1.91 0 3.105 2.068 2.15 3.723a2.48 2.48 0 0 1-2.15 1.24ZM11 19.446l-2.529 3.97h7.552a2.5 2.5 0 0 1-.205-.992v-3.377a2.97 2.97 0 0 1-1.49.398zm6.307-5.831a3.46 3.46 0 0 1 1.986-.623h2.482v-.496a3.97 3.97 0 0 0-3.972-3.971h-1.38c.56.857.884 1.88.884 2.978zM1.234 9.021a.993.993 0 0 0-.959 1.254l1.148 4.207c0 .548.444.992.992.992h8.439a.993.993 0 1 0 0-1.985H8.1L7.082 9.753a.99.99 0 0 0-.958-.732zm18.059 5.46a1.985 1.985 0 0 0-1.986 1.986v5.957c0 .548.445.993.993.993h4.467a.993.993 0 0 0 .993-.993v-5.957a1.986 1.986 0 0 0-1.986-1.985z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl mb-3 font-bold text-[#2d5da1]">Open to Work</h3>
+                    <p class="text-xl">Looking for exciting opportunities!</p>
+                    <div class="mt-6 flex flex-wrap gap-2 justify-center">
+                        <span class="skill-badge text-sm">Full-time</span>
+                        <span class="skill-badge text-sm">Contract</span>
+                        <span class="skill-badge text-sm">Freelance</span>
+                        <span class="skill-badge text-sm">Remote</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6">👋 Hello World!</h3>
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        I'm a programming enthusiast who loves building creative and functional applications.
-                        I mostly work with JavaScript, especially using Node.js, and I frequently use MongoDB
-                        as my primary database due to its flexibility and powerful document-oriented structure.
+    <footer class="py-16 border-t-3 border-dashed border-[#2d2d2d] bg-white/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8">
+                <div class="inline-block mb-6">
+                    <div class="text-5xl font-bold mb-2">
+                        <span class="wavy-underline">Clayza Aubert</span>
+                    </div>
+                    <p class="text-xl handwritten-alt text-[#2d2d2d]/70">
+                        Creative Developer & Problem Solver
                     </p>
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        💡 I believe that every project I build is not just about writing code—it's about
-                        creating something meaningful, efficient, and impactful.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6">🛠️ What I Enjoy Working On:</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <div class="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                            <p class="text-gray-300">
-                                <strong>Web scraping</strong> - collecting relevant data that enhances app functionality
-                            </p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                            <p class="text-gray-300">
-                                <strong>Bot development</strong> - automating repetitive tasks and applying smart logic
-                            </p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                            <p class="text-gray-300">
-                                <strong>AI technologies</strong> - exploring machine learning and NLP for intelligent
-                                systems
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 gradient-text">Skills & Technologies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Backend Development -->
-                <div class="bg-gray-900 p-8 rounded-xl card-hover border border-gray-800">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-server text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold">Backend Frameworks</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Express.js</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Fastify</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">FastAPI</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Flask</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Koa.js</span>
-                    </div>
-                </div>
-
-                <!-- Programming Languages -->
-                <div class="bg-gray-900 p-8 rounded-xl card-hover border border-gray-800">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-code text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold">Programming Languages</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">JavaScript</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">TypeScript</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Python</span>
-                    </div>
-                </div>
-
-                <!-- Frontend Development -->
-                <div class="bg-gray-900 p-8 rounded-xl card-hover border border-gray-800">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-laptop-code text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold">Frontend Frameworks</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Next.js</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">React</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Remix</span>
-                    </div>
-                </div>
-
-                <!-- Database -->
-                <div class="bg-gray-900 p-8 rounded-xl card-hover border border-gray-800">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-database text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold">Database</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">MongoDB</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">SQL</span>
-                    </div>
-                </div>
-
-                <!-- AI & Machine Learning -->
-                <div class="bg-gray-900 p-8 rounded-xl card-hover border border-gray-800">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-brain text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold">AI & Machine Learning</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Machine
-                            Learning</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">LLM</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">VLM</span>
-                    </div>
-                </div>
-
-                <!-- Development -->
-                <div class="bg-gray-900 p-8 rounded-xl card-hover border border-gray-800">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-robot text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold">Specialized Development</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Bot</span>
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Web</span>
-                    </div>
-                </div>
-
-                <!-- Design & Others -->
-                <div class="bg-gray-900 p-8 rounded-xl card-hover border border-gray-800">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-palette text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold">Design & Tools</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">Photoshop</span>
-                        <span class="skill-tag bg-gray-800 px-3 py-1 rounded-full text-sm border border-gray-700">And
-                            More...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
-
-            <!-- Loading State -->
-            <div id="projects-loading" class="text-center">
-                <div class="bg-gray-900 p-12 rounded-xl border border-gray-800 max-w-2xl mx-auto">
-                    <div class="loading-pulse">
-                        <i class="fas fa-spinner fa-spin text-4xl text-gray-400 mb-4"></i>
-                        <p class="text-gray-400">Loading projects from GitHub...</p>
-                    </div>
                 </div>
             </div>
 
-            <!-- Projects Grid -->
-            <div id="projects-grid" class="projects-grid hidden">
-                <!-- Projects will be loaded here dynamically -->
+            <div class="flex flex-wrap justify-center gap-6 mb-8">
+                <a href="#home" class="text-lg hover:text-[#ff4d4d] transition-colors">Home</a>
+                <span class="text-[#2d2d2d]/30">•</span>
+                <a href="#about" class="text-lg hover:text-[#ff4d4d] transition-colors">About</a>
+                <span class="text-[#2d2d2d]/30">•</span>
+                <a href="#skills" class="text-lg hover:text-[#ff4d4d] transition-colors">Skills</a>
+                <span class="text-[#2d2d2d]/30">•</span>
+                <a href="#projects" class="text-lg hover:text-[#ff4d4d] transition-colors">Projects</a>
+                <span class="text-[#2d2d2d]/30">•</span>
+                <a href="#contact" class="text-lg hover:text-[#ff4d4d] transition-colors">Contact</a>
             </div>
 
-            <!-- Error State -->
-            <div id="projects-error" class="text-center hidden">
-                <div class="bg-gray-900 p-12 rounded-xl border border-gray-800 max-w-2xl mx-auto">
-                    <i class="fas fa-exclamation-triangle text-4xl text-yellow-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-4">Unable to Load Projects</h3>
-                    <p class="text-gray-400 mb-8">There was an issue loading projects from GitHub.</p>
-                    <a href="https://github.com/ClayzaAubert" target="_blank"
-                        class="inline-flex items-center gap-3 bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                        <i class="fab fa-github"></i>
-                        Visit GitHub Profile
-                    </a>
-                </div>
+            <div class="text-center">
+                <p class="text-xl mb-2">
+                    ©
+                    <script>document.write(new Date().getFullYear())</script> <span class="font-bold">Clayza
+                        Aubert</span>
+                </p>
+                <p class="text-base text-[#2d2d2d]/60 handwritten-alt">
+                    Built with ❤️, ☕, and lots of code
+                </p>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-16 gradient-text">Let's Connect</h2>
-            <p class="text-xl text-gray-300 mb-12 leading-relaxed">
-                Interested in collaborating or have a project in mind? Let's build something amazing together!
-            </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="https://github.com/ClayzaAubert" target="_blank"
-                    class="flex items-center gap-3 bg-gray-900 border border-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-800 transition-colors">
-                    <i class="fab fa-github text-xl"></i>
-                    GitHub
-                </a>
-                <a href="mailto:clayza.aubert@maelyn.my.id"
-                    class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                    <i class="fas fa-envelope text-xl"></i>
-                    Get In Touch
-                </a>
+            <div class="text-center mt-8">
+                <button onclick="alert('🎉 You found the easter egg! Thanks for exploring!')"
+                    class="text-sm text-[#2d2d2d]/30 hover:text-[#ff4d4d] transition-colors cursor-pointer">
+                    Click me for a surprise!
+                </button>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-black border-t border-gray-800">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-gray-400">
-                © 2025 Clayza Aubert. Built with passion and code.
-            </p>
         </div>
     </footer>
 
+    <button id="scroll-top"
+        class="fixed bottom-8 right-8 w-14 h-14 bg-[#ff4d4d] text-white rounded-full border-3 border-[#2d2d2d] hard-shadow opacity-0 pointer-events-none transition-all hover:scale-110 hover:-translate-y-1 z-50"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <span class="text-2xl">↑</span>
+    </button>
+
     <script>
-        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
 
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                }
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
             });
         });
 
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('bg-black/95');
+        const phrases = [
+            'Programming Enthusiast',
+            'Creative Developer',
+            'Bot Builder',
+            'AI Explorer',
+            'Problem Solver'
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typing-text');
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
             } else {
-                nav.classList.remove('bg-black/95');
+                typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
             }
-        });
 
-        // Animate skill tags on hover
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', function () {
-                this.style.transform = 'scale(1.05)';
-            });
+            let typeSpeed = isDeleting ? 50 : 100;
 
-            tag.addEventListener('mouseleave', function () {
-                this.style.transform = 'scale(1)';
-            });
-        });
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
 
-        // Discord Status Function
+            setTimeout(type, typeSpeed);
+        }
+
         async function fetchDiscordStatus() {
             try {
-                const response = await fetch(`https://api.lanyard.rest/v1/users/869009902599815219`);
+                const response = await fetch('https://api.lanyard.rest/v1/users/869009902599815219');
                 const data = await response.json();
 
                 if (data.success && data.data) {
-                    const user = data.data;
-                    const status = user.discord_status;
+                    const status = data.data.discord_status;
+                    const activities = data.data.activities || [];
 
-                    // Map warna dot status
-                    const statusMapDot = {
-                        online: "status-online",
-                        idle: "status-idle",
-                        dnd: "status-dnd",
-                        offline: "status-offline"
+                    const statusMap = {
+                        'online': 'Online',
+                        'idle': 'Idle',
+                        'dnd': 'Do Not Disturb',
+                        'offline': 'Offline'
                     };
 
-                    // Map status text
-                    const statusTextMap = {
-                        online: "🟢 Online",
-                        idle: "🟡 Idle",
-                        dnd: "🔴 Do Not Disturb",
-                        offline: "⚫ Offline"
-                    };
+                    const statusIndicator = document.querySelector('#discord-status .status-indicator');
+                    const statusText = document.getElementById('status-text');
+                    const activityText = document.getElementById('activity-text');
 
-                    // Update dot
-                    const statusDot = document.getElementById("status-dot");
-                    statusDot.className = `absolute bottom-1 right-1 w-5 h-5 rounded-full border-2 border-gray-900 ${statusMapDot[status] || "status-offline"}`;
+                    statusIndicator.className = 'status-indicator status-' + status;
+                    statusText.textContent = statusMap[status] || 'Unknown';
 
-                    // Ambil activity detail
-                    let activityText = "";
-                    let activityTime = "";
-                    if (user.activities && user.activities.length > 0) {
-                        const activity = user.activities[0];
-                        if (activity.type === 0) activityText = `🎮 Playing ${activity.name}`;
-                        if (activity.type === 2) activityText = `🎵 Listening to ${activity.name}`;
-                        if (activity.type === 3) activityText = `👀 Watching ${activity.name}`;
-                        if (activity.type === 4) activityText = `💬 ${activity.state || "Status"}`;
+                    if (activities.length > 0) {
+                        const activity = activities[0];
+                        let activityStr = '';
 
-                        // Waktu mulai
-                        if (activity.timestamps && activity.timestamps.start) {
-                            const start = new Date(activity.timestamps.start);
-                            const hours = String(start.getHours()).padStart(2, '0');
-                            const minutes = String(start.getMinutes()).padStart(2, '0');
-                            activityTime = `⏱ Since ${hours}:${minutes}`;
+                        if (activity.name === 'Visual Studio Code') {
+                            activityStr = `💻 ${activity.details || 'Coding'}`;
+                        } else if (activity.name === 'Spotify') {
+                            activityStr = `🎵 ${activity.details || 'Listening to music'}`;
+                        } else if (activity.type === 0) {
+                            activityStr = `🎮 Playing ${activity.name}`;
+                        } else if (activity.type === 2) {
+                            activityStr = `🎵 Listening to ${activity.name}`;
+                        } else if (activity.type === 3) {
+                            activityStr = `📺 Watching ${activity.name}`;
+                        } else {
+                            activityStr = `✨ ${activity.name}`;
                         }
+
+                        activityText.textContent = activityStr;
+                        activityText.classList.remove('hidden');
+                    } else {
+                        activityText.classList.add('hidden');
                     }
 
-                    // Device aktif
-                    const devices = [];
-                    if (user.active_on_discord_desktop) devices.push("💻 Desktop");
-                    if (user.active_on_discord_mobile) devices.push("📱 Mobile");
-                    if (user.active_on_discord_web) devices.push("🌐 Web");
-                    const deviceText = devices.length ? `Devices: ${devices.join(", ")}` : "";
+                    const footerStatus = document.getElementById('discord-status-footer');
+                    let footerContent = `
+                        <span class="status-indicator status-${status}"></span>
+                        <span class="text-sm font-bold">${statusMap[status]}</span>
+                    `;
 
-                    // Guild tag
-                    const guildTag = user.discord_user?.primary_guild?.tag
-                        ? `🏷 Guild: ${user.discord_user.primary_guild.tag}`
-                        : "";
+                    if (activities.length > 0) {
+                        const activity = activities[0];
+                        let activityLabel = activity.name;
+                        if (activity.details) {
+                            activityLabel = activity.details;
+                        }
+                        footerContent += `<span class="text-xs text-[#2d2d2d]/60 ml-2">• ${activityLabel}</span>`;
+                    }
 
-                    // Gabungkan semua info
-                    const badge = document.getElementById("status-badge");
-                    badge.innerHTML = `
-                <div>${statusTextMap[status] || "⚫ Unknown"}</div>
-                ${activityText ? `<div>${activityText}</div>` : ""}
-                ${activityTime ? `<div>${activityTime}</div>` : ""}
-                ${guildTag ? `<div>${guildTag}</div>` : ""}
-            `;
-                    badge.className = "text-gray-400 text-sm space-y-1";
-                } else {
-                    throw new Error("Failed to fetch Discord status");
+                    footerStatus.innerHTML = footerContent;
                 }
             } catch (error) {
-                console.error("Discord status error:", error);
-                const statusDot = document.getElementById("status-dot");
-                const badge = document.getElementById("status-badge");
-
-                statusDot.className = "absolute bottom-1 right-1 w-5 h-5 rounded-full border-2 border-gray-900 status-offline";
-                badge.textContent = "Status Unavailable";
-                badge.className = "text-gray-400 text-sm";
+                console.error('Error fetching Discord status:', error);
             }
         }
 
-        // GitHub Projects Function
-        async function fetchGitHubProjects() {
+        async function fetchGitHubData() {
+            const container = document.getElementById('projects-container');
             try {
-                const response = await fetch('https://api.github.com/users/ClayzaAubert/repos?sort=updated&per_page=12');
+                const response = await fetch('https://api.github.com/users/ClayzaAubert/repos?sort=updated&per_page=6');
                 const repos = await response.json();
 
-                const projectsGrid = document.getElementById('projects-grid');
-                const projectsLoading = document.getElementById('projects-loading');
-                const projectsError = document.getElementById('projects-error');
+                if (!Array.isArray(repos) || repos.length === 0) {
+                    throw new Error('No repositories found');
+                }
 
-                if (repos && Array.isArray(repos)) {
-                    const filteredRepos = repos
-                        .filter(repo => !repo.fork && !repo.archived)
-                        .sort((a, b) => {
-                            const scoreA = (a.description ? 2 : 0) + a.stargazers_count + (a.language ? 1 : 0);
-                            const scoreB = (b.description ? 2 : 0) + b.stargazers_count + (b.language ? 1 : 0);
-                            return scoreB - scoreA;
-                        })
-                        .slice(0, 9);
+                container.innerHTML = repos.map((repo, index) => {
+                    const rotations = ['rotate-1', '-rotate-1', 'rotate-2', '-rotate-2', 'rotate-1', '-rotate-1'];
+                    const rotation = rotations[index % rotations.length];
+                    const decoration = index % 2 === 0 ?
+                        '<div class="tape-decoration"></div>' :
+                        '<div class="tack-decoration"></div>';
 
-                    projectsGrid.innerHTML = filteredRepos.map(repo => {
-                        const language = repo.language || 'Unknown';
-                        const languageClass = `language-${language.toLowerCase().replace(/[^a-z]/g, '')}`;
-
-                        return `
-                    <div class="project-card p-6 rounded-xl">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white truncate pr-4">${repo.name}</h3>
-                            <div class="flex items-center gap-2 text-gray-400 text-sm flex-shrink-0">
-                                <i class="fas fa-star"></i>
-                                <span>${repo.stargazers_count}</span>
+                    return `
+                        <div class="card-hand-drawn overflow-hidden p-6 md:p-8 relative transform ${rotation} hover:rotate-0 transition-all group paper-texture">
+                            ${decoration}
+                            <h3 class="text-2xl md:text-3xl mb-3 wavy-underline break-words">${repo.name}</h3>
+                            <p class="text-base md:text-lg mb-4 text-[#2d2d2d]/80 line-clamp-3 min-h-[4.5rem]">
+                                ${repo.description || 'No description available'}
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                ${repo.language ? `<span class="skill-badge text-sm">${repo.language}</span>` : ''}
+                                <span class="skill-badge text-sm">⭐ ${repo.stargazers_count}</span>
+                                ${repo.forks_count > 0 ? `<span class="skill-badge text-sm">🔀 ${repo.forks_count}</span>` : ''}
                             </div>
-                        </div>
-                        
-                        <p class="text-gray-300 text-sm mb-4 line-clamp-3">
-                            ${repo.description || 'No description available.'}
-                        </p>
-                        
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center gap-2">
-                                <span class="project-language ${languageClass} language-default">
-                                    ${language}
-                                </span>
-                                <div class="flex items-center gap-3 text-gray-400 text-sm">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-code-branch"></i>
-                                        ${repo.forks_count}
-                                    </span>
-                                </div>
-                            </div>
+                            <a href="${repo.html_url}" target="_blank" 
+                               class="inline-flex items-center gap-2 text-[#2d5da1] hover:text-[#ff4d4d] transition-colors font-bold text-lg">
+                                <span>View Project</span>
+                                <span class="group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
                             
-                            <div class="flex gap-2">
-                                ${repo.homepage ? `
-                                    <a href="${repo.homepage}" 
-                                       target="_blank" 
-                                       class="p-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
-                                       title="Live Demo">
-                                        <i class="fas fa-external-link-alt text-sm"></i>
-                                    </a>
-                                ` : ''}
-                                <a href="${repo.html_url}" 
-                                   target="_blank" 
-                                   class="p-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors"
-                                   title="View Source">
-                                    <i class="fab fa-github text-sm"></i>
-                                </a>
-                            </div>
+                            <!-- Decorative corner -->
+                            <svg class="absolute bottom-2 right-2 w-8 h-8 opacity-20" viewBox="0 0 50 50">
+                                <circle cx="25" cy="25" r="20" fill="none" stroke="#ff4d4d" stroke-width="2" stroke-dasharray="5,3"/>
+                            </svg>
                         </div>
-                        
-                        <div class="mt-4 text-xs text-gray-500">
-                            Updated: ${new Date(repo.updated_at).toLocaleDateString()}
-                        </div>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error fetching GitHub data:', error);
+                container.innerHTML = `
+                    <div class="col-span-full card-hand-drawn p-12 text-center">
+                        <div class="text-6xl mb-4">😕</div>
+                        <h3 class="text-3xl mb-4">Unable to Load Projects</h3>
+                        <p class="text-xl mb-6">There was an issue loading projects from GitHub.</p>
+                        <a href="https://github.com/ClayzaAubert" target="_blank" 
+                           class="btn-hand-drawn bg-white px-8 py-3 text-xl inline-block">
+                            Visit GitHub Profile
+                        </a>
                     </div>
                 `;
-                    }).join('');
-
-                    // Tambahkan GitHub link card
-                    projectsGrid.innerHTML += `
-                <div class="project-card p-6 rounded-xl flex flex-col items-center justify-center text-center bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-dashed border-gray-600">
-                    <i class="fab fa-github text-4xl text-gray-400 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">View More Projects</h3>
-                    <p class="text-gray-400 mb-4 text-sm">
-                        Explore all my repositories and contributions on GitHub
-                    </p>
-                    <a href="https://github.com/ClayzaAubert" 
-                       target="_blank"
-                       class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors text-sm">
-                        <i class="fab fa-github"></i>
-                        Visit GitHub
-                    </a>
-                </div>
-            `;
-
-                    projectsLoading.classList.add('hidden');
-                    projectsGrid.classList.remove('hidden');
-
-                    // Fungsi untuk atur col-span terakhir
-                    function adjustLastCard() {
-                        const gridCols = window.getComputedStyle(projectsGrid).gridTemplateColumns.split(' ').length;
-                        const cards = projectsGrid.querySelectorAll('.project-card');
-                        cards.forEach(card => card.classList.remove('col-span-full'));
-
-                        if (gridCols > 2 && cards.length % gridCols === 1) {
-                            cards[cards.length - 1].classList.add('col-span-full');
-                        }
-                    }
-
-                    adjustLastCard();
-                    window.addEventListener('resize', adjustLastCard);
-
-                } else {
-                    throw new Error('Invalid response from GitHub API');
-                }
-            } catch (error) {
-                console.error('GitHub projects error:', error);
-                document.getElementById('projects-loading').classList.add('hidden');
-                document.getElementById('projects-error').classList.remove('hidden');
             }
         }
 
-        // Initialize functions when page loads
-        document.addEventListener('DOMContentLoaded', function () {
-            fetchDiscordStatus();
-            fetchGitHubProjects();
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
 
-            // Update Discord status every 30 seconds
+        document.addEventListener('DOMContentLoaded', () => {
+            type();
+            fetchDiscordStatus();
+            fetchGitHubData();
+
             setInterval(fetchDiscordStatus, 30000);
         });
-    </script>
-
-    <!-- Dragon Animation Script -->
-    <script>
-        "use strict";
-
-        const screen = document.getElementById("screen");
-        const xmlns = "http://www.w3.org/2000/svg";
-        const xlinkns = "http://www.w3.org/1999/xlink";
-
-        window.addEventListener(
-            "pointermove",
-            (e) => {
-                pointer.x = e.clientX;
-                pointer.y = e.clientY;
-                rad = 0;
-            },
-            false
-        );
-
-        const resize = () => {
-            width = window.innerWidth;
-            height = window.innerHeight;
-        };
-
-        let width, height;
-        window.addEventListener("resize", () => resize(), false);
-        resize();
-
-        const prepend = (use, i) => {
-            const elem = document.createElementNS(xmlns, "use");
-            elems[i].use = elem;
-            elem.setAttributeNS(xlinkns, "xlink:href", "#" + use);
-            screen.prepend(elem);
-        };
-
-        const N = 40;
-
-        const elems = [];
-        for (let i = 0; i < N; i++) elems[i] = { use: null, x: width / 2, y: 0 };
-        const pointer = { x: width / 2, y: height / 2 };
-        const radm = Math.min(pointer.x, pointer.y) - 20;
-        let frm = Math.random();
-        let rad = 0;
-
-        for (let i = 1; i < N; i++) {
-            if (i === 1) prepend("Cabeza", i);
-            else if (i === 8 || i === 14) prepend("Aletas", i);
-            else prepend("Espina", i);
-        }
-
-        const run = () => {
-            requestAnimationFrame(run);
-            let e = elems[0];
-            const ax = (Math.cos(3 * frm) * rad * width) / height;
-            const ay = (Math.sin(4 * frm) * rad * height) / width;
-            e.x += (ax + pointer.x - e.x) / 10;
-            e.y += (ay + pointer.y - e.y) / 10;
-            for (let i = 1; i < N; i++) {
-                let e = elems[i];
-                let ep = elems[i - 1];
-                const a = Math.atan2(e.y - ep.y, e.x - ep.x);
-                e.x += (ep.x - e.x + (Math.cos(a) * (100 - i)) / 5) / 4;
-                e.y += (ep.y - e.y + (Math.sin(a) * (100 - i)) / 5) / 4;
-                const s = (162 + 4 * (1 - i)) / 50;
-                e.use.setAttributeNS(
-                    null,
-                    "transform",
-                    `translate(${(ep.x + e.x) / 2},${(ep.y + e.y) / 2}) rotate(${(180 / Math.PI) * a
-                    }) translate(${0},${0}) scale(${s},${s})`
-                );
-            }
-            if (rad < radm) rad++;
-            frm += 0.003;
-            if (rad > 60) {
-                pointer.x += (width / 2 - pointer.x) * 0.05;
-                pointer.y += (height / 2 - pointer.y) * 0.05;
-            }
-        };
-
-        run();
     </script>
 </body>
 
